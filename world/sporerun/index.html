@@ -59,9 +59,10 @@ let G,game,started=false,TIMERS=[];const later=(f,ms)=>TIMERS.push(setTimeout(f,
 const BOX={T:[0,0,32,32],r:[9,16,23,25],B:[7,15,24,27]};
 function blocked(tx,ty){if(tx<0||ty<0||tx>=W||ty>=H)return true;const c=G[ty][tx];return c==='T'||c==='r'||c==='B';}
 function solid(tx,ty){if(tx<0||ty<0||tx>=W||ty>=H)return true;const c=G[ty][tx];return c==='T'||c==='r'||c==='B';}
-function hitsWall(x,y,r){const x0=Math.floor((x-r)/T),x1=Math.floor((x+r)/T),y0=Math.floor((y-r)/T),y1=Math.floor((y+r)/T);
+let HX=9,HY=9; // player half-extents, set from the hero art bbox at load
+function hitsWall(x,y,r,ry=r){const x0=Math.floor((x-r)/T),x1=Math.floor((x+r)/T),y0=Math.floor((y-ry)/T),y1=Math.floor((y+ry)/T);
  for(let ty=y0;ty<=y1;ty++)for(let tx=x0;tx<=x1;tx++){if(tx<0||ty<0||tx>=W||ty>=H)return true;const b=BOX[G[ty][tx]];if(!b)continue;
-  const bx=tx*T,by=ty*T;if(x+r>bx+b[0]&&x-r<bx+b[2]&&y+r>by+b[1]&&y-r<by+b[3])return true;}return false;}
+  const bx=tx*T,by=ty*T;if(x+r>bx+b[0]&&x-r<bx+b[2]&&y+ry>by+b[1]&&y-ry<by+b[3])return true;}return false;}
 // BFS distance field from the player's tile (rocks/bushes/trees block); robin walks downhill
 function bfs(sx,sy){const D=new Int16Array(W*H).fill(-1),q=[sx+sy*W];D[q[0]]=0;
  for(let i=0;i<q.length;i++){const c=q[i],x=c%W,y=(c/W)|0;for(const[dx,dy]of[[1,0],[-1,0],[0,1],[0,-1]]){const nx=x+dx,ny=y+dy;if(blocked(nx,ny))continue;const n=nx+ny*W;if(D[n]<0){D[n]=D[c]+1;q.push(n);}}}return D;}
@@ -105,17 +106,17 @@ if(g.state!=='play'){if(g.state==='win'||g.state==='lose')g.beat=(g.beat||0)+dt;
  const sp=(p.boost>0?200:130);
  const acc=1-Math.pow(.0005,dt);p.vx+=(ix*sp-p.vx)*acc;p.vy+=(iy*sp-p.vy)*acc;
  let mx=(p.vx+p.kb.x)*dt,my=(p.vy+p.kb.y)*dt;p.kb.x*=Math.pow(.002,dt);p.kb.y*=Math.pow(.002,dt);
- const R=9;if(!hitsWall(p.x+mx,p.y,R))p.x+=mx;else{p.vx=0;p.kb.x=0;}if(!hitsWall(p.x,p.y+my,R))p.y+=my;else{p.vy=0;p.kb.y=0;}
+ if(!hitsWall(p.x+mx,p.y,HX,HY))p.x+=mx;else{p.vx=0;p.kb.x=0;}if(!hitsWall(p.x,p.y+my,HX,HY))p.y+=my;else{p.vy=0;p.kb.y=0;}
  const moving=Math.hypot(p.vx,p.vy)>20;if(ix)p.face=ix>0?1:-1;if(Math.abs(ix)>.3||Math.abs(iy)>.3){p.dx=Math.abs(ix)>.3?Math.sign(ix):0;p.dy=Math.abs(iy)>.3?Math.sign(iy):0;}p.anim=moving?p.anim+dt*(p.boost>0?16:11):0;p.idle=moving?0:p.idle+dt;
  if(p.boost>0&&Math.random()<.6)g.parts.push({x:p.x+rnd(-5,5),y:p.y+10,vx:0,vy:-10,life:.3,max:.3,col:'#9ff',sz:2});
  // plant
- const PCY=p.y-2,tx=Math.floor(p.x/T),ty=Math.floor(PCY/T);
+ const PCY=p.y,tx=Math.floor(p.x/T),ty=Math.floor(PCY/T);
  if(G[ty][tx]==='D'){G[ty][tx]='P';g.planted++;g.t+=5;g.sprouts[tx+','+ty]=0;g.shake=4;burst(tx*T+16,ty*T+16,18,'#f3e9c6',70,.6);burst(tx*T+16,ty*T+16,8,'#d8402c',50,.5);
   floatText(tx*T+16,ty*T,'+5s','#ffe66b');beep(520,.09);later(()=>beep(780,.12),70);
   g.pops.push({x:tx*T+16,y:ty*T+12,t:0});if(g.planted>=g.total){for(let i=0;i<4;i++)burst(p.x,p.y,16,['#ffe66b','#d8402c','#fff','#9ff'][i],140,.9);return finish(true);}}
  // dew
  for(const d of g.dews){d.ph+=dt*4;if(d.respawn>0){d.respawn-=dt;if(d.respawn<=0)Object.assign(d,freeSpot(120));continue;}
-  if(Math.hypot(d.x-p.x,d.y-(p.y-2))<22){d.respawn=4;p.dew++;burst(d.x,d.y,10,'#bff',50,.4);beep(900+p.dew*150,.07,'sine',.07);
+  if(Math.hypot(d.x-p.x,d.y-p.y)<22){d.respawn=4;p.dew++;burst(d.x,d.y,10,'#bff',50,.4);beep(900+p.dew*150,.07,'sine',.07);
    if(p.dew>=3){p.dew=0;p.boost=2;floatText(p.x,p.y-20,'ZOOM!','#9ff');beep(400,.25,'sawtooth',.04,800);}else floatText(d.x,d.y-10,p.dew+'/3','#bff');}}
  // robin: hops in arcs toward player; idle player => faster hops
  const r=g.robin;r.peck=Math.max(0,r.peck-dt);r.rest=Math.max(0,(r.rest||0)-dt);
@@ -134,7 +135,7 @@ if(g.state!=='play'){if(g.state==='win'||g.state==='lose')g.beat=(g.beat||0)+dt;
  if(p.inv<=0&&r.rest<=0&&Math.hypot(r.x-p.x,r.y-p.y)<18){const ax=p.x-r.x,ay=p.y-r.y,am=Math.hypot(ax,ay)||1;
   // knockback: pick the most open direction biased away from the robin
   let bx=ax/am,by=ay/am,bs=-1e9;for(let a=0;a<16;a++){const ux=Math.cos(a*Math.PI/8),uy=Math.sin(a*Math.PI/8);let free=0;
-   for(let d=8;d<=64;d+=8){if(hitsWall(p.x+ux*d,p.y+uy*d,10))break;free=d;}const sc=free+(ux*ax+uy*ay)/am*28;if(sc>bs){bs=sc;bx=ux;by=uy;}}
+   for(let d=8;d<=64;d+=8){if(hitsWall(p.x+ux*d,p.y+uy*d,HX,HY))break;free=d;}const sc=free+(ux*ax+uy*ay)/am*28;if(sc>bs){bs=sc;bx=ux;by=uy;}}
   p.kb.x=bx*340;p.kb.y=by*340;p.inv=2.0;g.t-=3;g.shake=8;r.peck=.45;r.hop=0;r.z=0;g.hitFlash=.15;
   // robin hops back and rests ~1s
   r.rest=2.6;r.fx=r.x;r.fy=r.y;const rx=-ax/am,ry=-ay/am;r.tx=r.x+rx*44;r.ty=r.y+ry*44;r.hop=.3;r.hopT=0;r.peck=.45;
@@ -170,7 +171,14 @@ function drawRock(x,y){if(IMG.rock){X.drawImage(IMG.rock,x,y);return;}X.fillStyl
 // 8-way hero frames: right/down/up/downright/upright from art; left-side directions mirror; missing sets fall back to right/left
 function tintSil(c,col){const o=document.createElement('canvas');o.width=c.width;o.height=c.height;const x=o.getContext('2d');x.drawImage(c,0,0);x.globalCompositeOperation='source-in';x.fillStyle=col;x.fillRect(0,0,o.width,o.height);return o;}
 function frames(k){const a=[];for(let i=1;i<=8;i++)if(IMG[k+i])a.push(IMG[k+i]);return a;}
-function heroFrame(p){const dx=p.dx??p.face,dy=p.dy||0;let set=null,flipIt=false;
+ // fly agaric hero: 4-dir walk, diagonals use nearest left/right walk, idle frame when still
+function heroFrame(p){const moving=p.anim>0;if(IMG.hero_right1){
+  if(!moving&&IMG.heroIdle)return {im:IMG.heroIdle,flipIt:false};
+  const dx=p.dx??p.face,dy=p.dy||0;let d=dx?(dx>0?'right':'left'):(dy>0?'down':dy<0?'up':(p.face>0?'right':'left'));
+  let set=frames('hero_'+d),flipIt=false;if(!set.length){set=frames('hero_right');flipIt=d==='left';}
+  return {im:set[Math.floor(p.anim*.6)%set.length],flipIt};}
+ return travelerFrame(p);}
+function travelerFrame(p){const dx=p.dx??p.face,dy=p.dy||0;let set=null,flipIt=false;
  if(dy&&dx){set=frames(dy>0?'downright':'upright');flipIt=dx<0;}else if(dy&&!dx){set=frames(dy>0?'down':'up');}
  if(!set||!set.length){set=frames('tr');flipIt=p.face<0;}
  const n=set.length||1,im=set[Math.floor(p.anim)%n];return {im,flipIt};}
@@ -266,7 +274,8 @@ function drawTitle(){const t=document.getElementById('tc'),x=t.getContext('2d');
  x.fillStyle='#2f5a2a';x.fillRect(0,62,120,18);if(IMG.lighthouse)x.drawImage(IMG.lighthouse,84,62-IMG.lighthouse.height-0);
  const f=1+Math.floor(performance.now()/90)%8;if(IMG['tr'+f])x.drawImage(IMG['tr'+f],30,40);if(IMG.mush1)x.drawImage(IMG.mush1,62,50,16,16);
  if(game.state==='title')requestAnimationFrame(drawTitle);}
-loads.then(()=>{if(FILES.bush&&FILES.bush.bbox)BOX.B=FILES.bush.bbox;if(FILES.rock&&FILES.rock.bbox){const b=FILES.rock.bbox;BOX.r=[b[0],Math.max(b[1],b[3]-10),b[2],b[3]];}
+loads.then(()=>{{const bs=Object.keys(FILES).filter(k=>k.startsWith('hero_')&&FILES[k].bbox).map(k=>FILES[k].bbox);if(bs.length){const x0=Math.min(...bs.map(b=>b[0])),x1=Math.max(...bs.map(b=>b[2])),y0=Math.min(...bs.map(b=>b[1])),y1=Math.max(...bs.map(b=>b[3]));HX=(x1-x0)/2-1;HY=(y1-y0)/2-1;}}
+ if(FILES.bush&&FILES.bush.bbox)BOX.B=FILES.bush.bbox;if(FILES.rock&&FILES.rock.bbox){const b=FILES.rock.bbox;BOX.r=[b[0],Math.max(b[1],b[3]-10),b[2],b[3]];}
  if(IMG.logoL&&IMG.logoR){const L=document.getElementById('logo'),lx=L.getContext('2d');lx.drawImage(IMG.logoL,0,0,48,48);lx.drawImage(IMG.logoR,48,0,48,48);L.style.display='block';document.getElementById('logoTxt').style.display='none';}
  if(IMG.panel){const u=IMG.panel.toDataURL();for(const id of ['panel','tp']){const e=document.getElementById(id).style;
   e.border='15px solid transparent';const n=FILES.panel.inset||5;e.border=(n*3)+'px solid transparent';e.borderImage=`url(${u}) ${n} fill / ${n*3}px stretch`;e.background='none';e.boxShadow='none';e.imageRendering='pixelated';e.color='#3a2410';}

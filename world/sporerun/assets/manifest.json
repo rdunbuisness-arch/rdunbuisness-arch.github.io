@@ -148,68 +148,238 @@
   "file": "traveler_walk_right_f8_v2.png",
   "key": "corner"
  },
+ "hero_right1": {
+  "file": "fly_agaric_walk_right_f1_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   6,
+   30,
+   31
+  ]
+ },
+ "hero_right2": {
+  "file": "fly_agaric_walk_right_f2_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   5,
+   30,
+   31
+  ]
+ },
+ "hero_right3": {
+  "file": "fly_agaric_walk_right_f3_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   6,
+   30,
+   31
+  ]
+ },
+ "hero_right4": {
+  "file": "fly_agaric_walk_right_f4_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   5,
+   30,
+   31
+  ]
+ },
+ "hero_left1": {
+  "file": "fly_agaric_walk_left_f1_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   6,
+   30,
+   31
+  ]
+ },
+ "hero_left2": {
+  "file": "fly_agaric_walk_left_f2_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   5,
+   30,
+   31
+  ]
+ },
+ "hero_left3": {
+  "file": "fly_agaric_walk_left_f3_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   6,
+   30,
+   31
+  ]
+ },
+ "hero_left4": {
+  "file": "fly_agaric_walk_left_f4_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   5,
+   30,
+   31
+  ]
+ },
+ "hero_down1": {
+  "file": "fly_agaric_walk_down_f1_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   6,
+   30,
+   31
+  ]
+ },
+ "hero_down2": {
+  "file": "fly_agaric_walk_down_f2_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   5,
+   30,
+   31
+  ]
+ },
+ "hero_down3": {
+  "file": "fly_agaric_walk_down_f3_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   6,
+   30,
+   31
+  ]
+ },
+ "hero_down4": {
+  "file": "fly_agaric_walk_down_f4_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   5,
+   30,
+   31
+  ]
+ },
+ "hero_up1": {
+  "file": "fly_agaric_walk_up_f1_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   6,
+   30,
+   31
+  ]
+ },
+ "hero_up2": {
+  "file": "fly_agaric_walk_up_f2_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   5,
+   30,
+   31
+  ]
+ },
+ "hero_up3": {
+  "file": "fly_agaric_walk_up_f3_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   6,
+   30,
+   31
+  ]
+ },
+ "hero_up4": {
+  "file": "fly_agaric_walk_up_f4_v2.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   5,
+   30,
+   31
+  ]
+ },
+ "heroIdle": {
+  "file": "fly_agaric_v3.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   5,
+   30,
+   31
+  ]
+ },
  "downright1": {
-  "file": "traveler_walk_downright_f1_v1.png",
+  "file": "traveler_walk_downright_f1_v2.png",
   "key": "#E6E1D4"
  },
  "downright2": {
-  "file": "traveler_walk_downright_f2_v1.png",
+  "file": "traveler_walk_downright_f2_v2.png",
   "key": "#E6E1D4"
  },
  "downright3": {
-  "file": "traveler_walk_downright_f3_v1.png",
+  "file": "traveler_walk_downright_f3_v2.png",
   "key": "#E6E1D4"
  },
  "downright4": {
-  "file": "traveler_walk_downright_f4_v1.png",
+  "file": "traveler_walk_downright_f4_v2.png",
   "key": "#E6E1D4"
  },
  "downright5": {
-  "file": "traveler_walk_downright_f5_v1.png",
+  "file": "traveler_walk_downright_f5_v2.png",
   "key": "#E6E1D4"
  },
  "downright6": {
-  "file": "traveler_walk_downright_f6_v1.png",
+  "file": "traveler_walk_downright_f6_v2.png",
   "key": "#E6E1D4"
  },
  "downright7": {
-  "file": "traveler_walk_downright_f7_v1.png",
+  "file": "traveler_walk_downright_f7_v2.png",
   "key": "#E6E1D4"
  },
  "downright8": {
-  "file": "traveler_walk_downright_f8_v1.png",
+  "file": "traveler_walk_downright_f8_v2.png",
   "key": "#E6E1D4"
  },
  "upright1": {
-  "file": "traveler_walk_upright_f1_v1.png",
+  "file": "traveler_walk_upright_f1_v2.png",
   "key": "#E6E1D4"
  },
  "upright2": {
-  "file": "traveler_walk_upright_f2_v1.png",
+  "file": "traveler_walk_upright_f2_v2.png",
   "key": "#E6E1D4"
  },
  "upright3": {
-  "file": "traveler_walk_upright_f3_v1.png",
+  "file": "traveler_walk_upright_f3_v2.png",
   "key": "#E6E1D4"
  },
  "upright4": {
-  "file": "traveler_walk_upright_f4_v1.png",
+  "file": "traveler_walk_upright_f4_v2.png",
   "key": "#E6E1D4"
  },
  "upright5": {
-  "file": "traveler_walk_upright_f5_v1.png",
+  "file": "traveler_walk_upright_f5_v2.png",
   "key": "#E6E1D4"
  },
  "upright6": {
-  "file": "traveler_walk_upright_f6_v1.png",
+  "file": "traveler_walk_upright_f6_v2.png",
   "key": "#E6E1D4"
  },
  "upright7": {
-  "file": "traveler_walk_upright_f7_v1.png",
+  "file": "traveler_walk_upright_f7_v2.png",
   "key": "#E6E1D4"
  },
  "upright8": {
-  "file": "traveler_walk_upright_f8_v1.png",
+  "file": "traveler_walk_upright_f8_v2.png",
   "key": "#E6E1D4"
  }
 }
