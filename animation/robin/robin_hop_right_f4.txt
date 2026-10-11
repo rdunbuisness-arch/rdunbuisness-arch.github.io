@@ -1,0 +1,1253 @@
+Robin hop_right frame 4/4: land
+Base: /workspace/studio/branch1/robin_hero_v3.png (512x512 export = 64x64 art at 8x)
+Canvas: 64 x 64 pixels. Origin (0,0) = top-left; x to the right, y down.
+
+Palette (key = hex), identical to base:
+  a = #5b6c18
+  b = #465219
+  c = #6c4a18
+  d = #884315
+  e = #718815
+  f = #fa6908
+  g = #fa7821
+  h = #4a6c18
+  i = #6c3a18
+  j = #3a2518
+  k = #f59758
+  l = #523b19
+  m = #3a2c18
+  n = #885a15
+  o = #a64c10
+  p = #c4550c
+  q = #c47a0c
+  r = #e1e1e1
+  s = #edd3ac
+  t = #898989
+  u = #5a8815
+  v = #882c15
+  w = #f0e8db
+  x = #989898
+  y = #f1a775
+  z = #6aa610
+  A = #88a610
+  B = #141414
+  C = #323232
+  D = #eeb691
+  E = #f0f0f0
+
+Full grid (64 rows x 64 chars, row 0 first):
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaeeeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaeeeaaaaaaaaaaaaaaaaaeeeeeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaeeeeeaaaaaaaaaaaaaaaaaeeeaaaaaaaaaaaaaaeeeaaaaaaaaaaaaaaa
+aaaaaaeeAAAeeaaaaaaaaaaaaaaaaaeaaaaaaaaaaaaaaeeeeeaaaaaaaaaaaaaa
+aaaaaaeeAAAeeaaaaaaaaaaaaaaaaaaaaaaaaaaajjjjjeeeeeeaaaaaaaaaaaaa
+aaaaaaeeAAAeeaaaaaaaaaaaaaaaaaaaaaaaaajjpppppjjeeeeaaaaaaaaaaaaa
+aaaaaaaeeeeeaaaaaaaaaaaaaaaaaaaaaaaaajpppppppppjeeeaaaaaaaaaaaaa
+aaaaaaaaeeeaaaaaaaaaaaaaaaaaaaaaaaaajpppoottttttjeaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajppootttkkkkktvaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajppodttgkkkkkkkkvaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajpoddtggkkkkkkkkvaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajpoddttggkkkBBkkkkvaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajpddttgggkkBEBBkkkvjaaaeeeaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajjoddtggggkkkBBkkkkCCCaeeeeeaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaajjjppdddtggggkkkkkkkkkCCaaeeeeeaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaajjoopppddttgggggkkkkkkkkvaaaeeeeeaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaajoooopooddtgggggggkkkkkkvaaaaaeeeaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaajooooooddddtggggggggkkkkkvhhhhaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaajoodddddddddtfggggggggkkkvhhhhhhaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaajooiiddddddddtffgggggggggvhhhhhhhhaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaajooiiiiddppppptffgggggggggvhhhhhhhhaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaajoiiiipppdddoitfffggggggggvhhhhhhhhaaaaaaa
+aaaaaaaaaaaaaaaaaaaaajoiiidpddddioddtfffffgggggggvhhhhhhhaaaaaaa
+aaaaaaaaaaaaaaaaaaaaajoiidddddooddddtffffffggggggvhhhhhhhaaaaaaa
+aaaaaaaaaaaaaaaaaaaajoidddoiddddddoittfffffffffffvhhhhhhaaaaazaa
+aaaaaaaaaaaaaaaaaaaajoddioddddddiodddtffffffffffvahhhhhaaaeezuua
+aaaaaaaaaaaaaaaaaaaajiooddddddoodddddtffffffffffvaaaaaaaaeeuuuha
+aaaaaaaaaaaaaaaaaaaajiddddddooddddddottfffffffffvaaaaaaaaeqchhaa
+aaaaaaaaaaaaaaaaaaaaajddddoiddddddoiwwwDfffffffvaaaaaaaazqcmmeaa
+aaaaaaaaaaaaaaaaaaaaajddioddddddiidwwwwwfffffffvaaaaaaauuzmeeaaa
+aaaaaaaaaaaaaaaaaaaaajooddddddiodrrwwwwwwfffffvaaaaaaaahuuuaaaaa
+aaaaaaaaaaaaaaaaaaaajjddddddoossrrrrwwwwwwDffvaaaaaaaaqchhaaaaaa
+aaaaaaaaaaaaaaaaaaajddiiiiiiissssrrrrrrrrrrrrxaaaaaaaqczaaaaaaaa
+aaaaaaaaaaaaaaaaaajddiiiiiiiisssssrrrrrrrrrrxaaaaaaaqczuuaaaaaaa
+aaaaaaaaaaaaaaaaajddiiijjjiiissssssrrrrrrrrrxaaaaaaqcuuuhaaaaaaa
+aaaaaaaaaaaaaaaajdiiiijaaajjisssssssssssssxxaaaaaqqcmahhaaaqqqqq
+aaaaaaaaaaaaaajdiiiijjaaaaaajxxxxsssssssxxaaaaaaqccmauuuqqqnnnnn
+aaaaaaaaaaaaajdiiijjaaaaaaaaaaaaaxxxxxxxaaaaaaaammmqqnnnnnnccccc
+aaaaaaaaaaaajdiiijaaaaaaaaaaaaaayyyyyayaaaqannnmnnnnncccccclcccc
+aaaaaaaaaaajdiiijaaaaaaaaaaaaaaayayayyyyyynncccnccccccccccccnccc
+aaaaaaaaaaajiiijaaaaaaaaaaaaaaannnnnnycynyccccccnnlllcccccclllll
+aaaaaaaaaaajijjaaaaaaaaaannnnnncccccccccccccclnnnnnccllllllmmmmm
+aaaaaaaaaaaajuzaaaaaqnnnnccccccccccccclccccccccnlllllmmmmmmbbbbb
+aaaaaaaaaaaahuuuqqqqncccccccccclccccccnccczlllllmmmmmbbbbbbbbbbb
+aaaauauaaqqqqhhnnnnncccccccccccccccccllllzuummmmaaaabbbbbbbbbbbb
+aaaquuuuqnnnnncccccccccclccncccllllllmmmuuuhaaaaaaaaabbbbbbbbbbb
+qqqnnnnnncnnccccclcccccccclllllmmmmmmaaaahhaaaaaaaaaabbbbbbbbbbb
+nnnccccccnllncccncccllllllmmmmmaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbba
+ccclccccccnnccllllllmmmmmmaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbaa
+cccccnccclllllmmmmmmaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+cccllllllmmmmmaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+lllmmmmmmaaaaaaaaabbbbbbbbbbbbaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbaa
+mmmaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbaaaaaaaaaaaabbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaabbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbaaabbbbbbbbbbbbbbbbbbbbbbbbbbaaaaabbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbaaaaabbbbbbbbbbbbbbbbbbbbbbbbbaaaaabbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbaaaaabbbbbbbbbbbbbbbbbbbbbbbbbaaaaabbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbaaabbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+Pixels that differ from base: 1124 total, grouped by the NEW color (x,y hex):
+## #5b6c18 (key a) - 324 px
+20,8 #5b6c18
+21,8 #5b6c18
+22,8 #5b6c18
+23,8 #5b6c18
+24,8 #5b6c18
+18,9 #5b6c18
+19,9 #5b6c18
+20,9 #5b6c18
+21,9 #5b6c18
+22,9 #5b6c18
+23,9 #5b6c18
+24,9 #5b6c18
+25,9 #5b6c18
+26,9 #5b6c18
+17,10 #5b6c18
+18,10 #5b6c18
+19,10 #5b6c18
+20,10 #5b6c18
+21,10 #5b6c18
+22,10 #5b6c18
+23,10 #5b6c18
+24,10 #5b6c18
+25,10 #5b6c18
+26,10 #5b6c18
+27,10 #5b6c18
+16,11 #5b6c18
+17,11 #5b6c18
+18,11 #5b6c18
+19,11 #5b6c18
+20,11 #5b6c18
+21,11 #5b6c18
+22,11 #5b6c18
+23,11 #5b6c18
+24,11 #5b6c18
+25,11 #5b6c18
+26,11 #5b6c18
+27,11 #5b6c18
+28,11 #5b6c18
+15,12 #5b6c18
+16,12 #5b6c18
+17,12 #5b6c18
+18,12 #5b6c18
+19,12 #5b6c18
+20,12 #5b6c18
+21,12 #5b6c18
+22,12 #5b6c18
+23,12 #5b6c18
+24,12 #5b6c18
+25,12 #5b6c18
+26,12 #5b6c18
+27,12 #5b6c18
+28,12 #5b6c18
+29,12 #5b6c18
+14,13 #5b6c18
+15,13 #5b6c18
+16,13 #5b6c18
+17,13 #5b6c18
+18,13 #5b6c18
+19,13 #5b6c18
+20,13 #5b6c18
+21,13 #5b6c18
+22,13 #5b6c18
+23,13 #5b6c18
+24,13 #5b6c18
+25,13 #5b6c18
+26,13 #5b6c18
+27,13 #5b6c18
+28,13 #5b6c18
+29,13 #5b6c18
+30,13 #5b6c18
+14,14 #5b6c18
+15,14 #5b6c18
+16,14 #5b6c18
+17,14 #5b6c18
+18,14 #5b6c18
+19,14 #5b6c18
+20,14 #5b6c18
+21,14 #5b6c18
+22,14 #5b6c18
+23,14 #5b6c18
+24,14 #5b6c18
+25,14 #5b6c18
+26,14 #5b6c18
+27,14 #5b6c18
+28,14 #5b6c18
+29,14 #5b6c18
+30,14 #5b6c18
+13,15 #5b6c18
+14,15 #5b6c18
+15,15 #5b6c18
+16,15 #5b6c18
+17,15 #5b6c18
+18,15 #5b6c18
+19,15 #5b6c18
+20,15 #5b6c18
+21,15 #5b6c18
+22,15 #5b6c18
+23,15 #5b6c18
+24,15 #5b6c18
+25,15 #5b6c18
+26,15 #5b6c18
+27,15 #5b6c18
+28,15 #5b6c18
+29,15 #5b6c18
+30,15 #5b6c18
+31,15 #5b6c18
+12,16 #5b6c18
+13,16 #5b6c18
+14,16 #5b6c18
+15,16 #5b6c18
+16,16 #5b6c18
+17,16 #5b6c18
+18,16 #5b6c18
+19,16 #5b6c18
+20,16 #5b6c18
+21,16 #5b6c18
+22,16 #5b6c18
+23,16 #5b6c18
+24,16 #5b6c18
+25,16 #5b6c18
+26,16 #5b6c18
+27,16 #5b6c18
+28,16 #5b6c18
+29,16 #5b6c18
+30,16 #5b6c18
+31,16 #5b6c18
+11,17 #5b6c18
+12,17 #5b6c18
+13,17 #5b6c18
+14,17 #5b6c18
+15,17 #5b6c18
+16,17 #5b6c18
+17,17 #5b6c18
+18,17 #5b6c18
+19,17 #5b6c18
+20,17 #5b6c18
+21,17 #5b6c18
+22,17 #5b6c18
+23,17 #5b6c18
+24,17 #5b6c18
+25,17 #5b6c18
+26,17 #5b6c18
+27,17 #5b6c18
+28,17 #5b6c18
+12,18 #5b6c18
+13,18 #5b6c18
+14,18 #5b6c18
+15,18 #5b6c18
+16,18 #5b6c18
+17,18 #5b6c18
+18,18 #5b6c18
+19,18 #5b6c18
+20,18 #5b6c18
+21,18 #5b6c18
+22,18 #5b6c18
+23,18 #5b6c18
+24,18 #5b6c18
+25,18 #5b6c18
+26,18 #5b6c18
+13,19 #5b6c18
+14,19 #5b6c18
+15,19 #5b6c18
+16,19 #5b6c18
+17,19 #5b6c18
+18,19 #5b6c18
+19,19 #5b6c18
+20,19 #5b6c18
+21,19 #5b6c18
+22,19 #5b6c18
+23,19 #5b6c18
+24,19 #5b6c18
+25,19 #5b6c18
+14,20 #5b6c18
+15,20 #5b6c18
+16,20 #5b6c18
+17,20 #5b6c18
+18,20 #5b6c18
+19,20 #5b6c18
+20,20 #5b6c18
+21,20 #5b6c18
+22,20 #5b6c18
+23,20 #5b6c18
+24,20 #5b6c18
+14,21 #5b6c18
+15,21 #5b6c18
+16,21 #5b6c18
+17,21 #5b6c18
+18,21 #5b6c18
+19,21 #5b6c18
+20,21 #5b6c18
+21,21 #5b6c18
+22,21 #5b6c18
+23,21 #5b6c18
+15,22 #5b6c18
+16,22 #5b6c18
+17,22 #5b6c18
+18,22 #5b6c18
+19,22 #5b6c18
+20,22 #5b6c18
+21,22 #5b6c18
+22,22 #5b6c18
+16,23 #5b6c18
+17,23 #5b6c18
+18,23 #5b6c18
+19,23 #5b6c18
+20,23 #5b6c18
+21,23 #5b6c18
+16,24 #5b6c18
+17,24 #5b6c18
+18,24 #5b6c18
+19,24 #5b6c18
+20,24 #5b6c18
+21,24 #5b6c18
+16,25 #5b6c18
+17,25 #5b6c18
+18,25 #5b6c18
+19,25 #5b6c18
+20,25 #5b6c18
+15,26 #5b6c18
+16,26 #5b6c18
+17,26 #5b6c18
+18,26 #5b6c18
+19,26 #5b6c18
+20,26 #5b6c18
+15,27 #5b6c18
+16,27 #5b6c18
+17,27 #5b6c18
+18,27 #5b6c18
+19,27 #5b6c18
+15,28 #5b6c18
+16,28 #5b6c18
+17,28 #5b6c18
+18,28 #5b6c18
+19,28 #5b6c18
+15,29 #5b6c18
+16,29 #5b6c18
+17,29 #5b6c18
+18,29 #5b6c18
+19,29 #5b6c18
+16,30 #5b6c18
+17,30 #5b6c18
+18,30 #5b6c18
+19,30 #5b6c18
+16,31 #5b6c18
+17,31 #5b6c18
+18,31 #5b6c18
+19,31 #5b6c18
+20,31 #5b6c18
+16,32 #5b6c18
+17,32 #5b6c18
+18,32 #5b6c18
+19,32 #5b6c18
+20,32 #5b6c18
+17,33 #5b6c18
+18,33 #5b6c18
+19,33 #5b6c18
+20,33 #5b6c18
+17,34 #5b6c18
+18,34 #5b6c18
+19,34 #5b6c18
+18,35 #5b6c18
+45,37 #5b6c18
+23,38 #5b6c18
+24,38 #5b6c18
+25,38 #5b6c18
+44,38 #5b6c18
+45,38 #5b6c18
+46,38 #5b6c18
+22,39 #5b6c18
+23,39 #5b6c18
+24,39 #5b6c18
+25,39 #5b6c18
+26,39 #5b6c18
+27,39 #5b6c18
+42,39 #5b6c18
+43,39 #5b6c18
+44,39 #5b6c18
+45,39 #5b6c18
+46,39 #5b6c18
+47,39 #5b6c18
+21,40 #5b6c18
+22,40 #5b6c18
+23,40 #5b6c18
+24,40 #5b6c18
+25,40 #5b6c18
+26,40 #5b6c18
+27,40 #5b6c18
+28,40 #5b6c18
+29,40 #5b6c18
+30,40 #5b6c18
+31,40 #5b6c18
+32,40 #5b6c18
+42,40 #5b6c18
+43,40 #5b6c18
+44,40 #5b6c18
+45,40 #5b6c18
+46,40 #5b6c18
+47,40 #5b6c18
+23,41 #5b6c18
+24,41 #5b6c18
+25,41 #5b6c18
+26,41 #5b6c18
+27,41 #5b6c18
+28,41 #5b6c18
+29,41 #5b6c18
+30,41 #5b6c18
+31,41 #5b6c18
+43,41 #5b6c18
+25,42 #5b6c18
+26,42 #5b6c18
+27,42 #5b6c18
+28,42 #5b6c18
+29,42 #5b6c18
+30,42 #5b6c18
+31,42 #5b6c18
+26,43 #5b6c18
+28,43 #5b6c18
+29,43 #5b6c18
+30,43 #5b6c18
+23,44 #5b6c18
+24,44 #5b6c18
+50,47 #5b6c18
+51,47 #5b6c18
+52,48 #5b6c18
+## #465219 (key b) - 3 px
+53,46 #465219
+52,47 #465219
+53,47 #465219
+## #6c4a18 (key c) - 14 px
+44,42 #6c4a18
+45,42 #6c4a18
+46,42 #6c4a18
+48,42 #6c4a18
+49,42 #6c4a18
+50,42 #6c4a18
+45,43 #6c4a18
+46,43 #6c4a18
+47,43 #6c4a18
+32,44 #6c4a18
+51,44 #6c4a18
+52,44 #6c4a18
+25,45 #6c4a18
+27,45 #6c4a18
+## #884315 (key d) - 99 px
+38,12 #884315
+37,13 #884315
+38,13 #884315
+36,14 #884315
+37,14 #884315
+35,15 #884315
+36,15 #884315
+35,16 #884315
+36,16 #884315
+34,17 #884315
+35,17 #884315
+36,17 #884315
+34,18 #884315
+35,18 #884315
+34,19 #884315
+35,19 #884315
+32,20 #884315
+33,20 #884315
+34,20 #884315
+35,20 #884315
+27,21 #884315
+28,21 #884315
+33,21 #884315
+34,21 #884315
+35,21 #884315
+28,22 #884315
+31,24 #884315
+32,24 #884315
+33,24 #884315
+26,25 #884315
+28,25 #884315
+29,25 #884315
+30,25 #884315
+34,25 #884315
+35,25 #884315
+25,26 #884315
+26,26 #884315
+27,26 #884315
+28,26 #884315
+32,26 #884315
+23,27 #884315
+24,27 #884315
+25,27 #884315
+28,27 #884315
+33,27 #884315
+22,28 #884315
+23,28 #884315
+26,28 #884315
+27,28 #884315
+28,28 #884315
+35,28 #884315
+36,28 #884315
+24,29 #884315
+25,29 #884315
+26,29 #884315
+27,29 #884315
+28,29 #884315
+29,29 #884315
+22,30 #884315
+23,30 #884315
+24,30 #884315
+25,30 #884315
+26,30 #884315
+27,30 #884315
+31,30 #884315
+32,30 #884315
+22,31 #884315
+23,31 #884315
+24,31 #884315
+25,31 #884315
+33,31 #884315
+22,32 #884315
+23,32 #884315
+26,32 #884315
+27,32 #884315
+28,32 #884315
+24,33 #884315
+25,33 #884315
+26,33 #884315
+27,33 #884315
+28,33 #884315
+29,33 #884315
+22,34 #884315
+23,34 #884315
+24,34 #884315
+25,34 #884315
+26,34 #884315
+27,34 #884315
+20,35 #884315
+21,35 #884315
+19,36 #884315
+20,36 #884315
+18,37 #884315
+19,37 #884315
+17,38 #884315
+15,39 #884315
+14,40 #884315
+13,41 #884315
+12,42 #884315
+## #fa6908 (key f) - 80 px
+37,21 #fa6908
+37,22 #fa6908
+38,22 #fa6908
+37,23 #fa6908
+38,23 #fa6908
+37,24 #fa6908
+38,24 #fa6908
+39,24 #fa6908
+37,25 #fa6908
+38,25 #fa6908
+39,25 #fa6908
+40,25 #fa6908
+41,25 #fa6908
+37,26 #fa6908
+38,26 #fa6908
+39,26 #fa6908
+40,26 #fa6908
+41,26 #fa6908
+42,26 #fa6908
+38,27 #fa6908
+39,27 #fa6908
+40,27 #fa6908
+41,27 #fa6908
+42,27 #fa6908
+43,27 #fa6908
+44,27 #fa6908
+45,27 #fa6908
+46,27 #fa6908
+47,27 #fa6908
+48,27 #fa6908
+38,28 #fa6908
+39,28 #fa6908
+40,28 #fa6908
+41,28 #fa6908
+42,28 #fa6908
+43,28 #fa6908
+44,28 #fa6908
+45,28 #fa6908
+46,28 #fa6908
+47,28 #fa6908
+38,29 #fa6908
+39,29 #fa6908
+40,29 #fa6908
+41,29 #fa6908
+42,29 #fa6908
+43,29 #fa6908
+44,29 #fa6908
+45,29 #fa6908
+46,29 #fa6908
+47,29 #fa6908
+39,30 #fa6908
+40,30 #fa6908
+41,30 #fa6908
+42,30 #fa6908
+43,30 #fa6908
+44,30 #fa6908
+45,30 #fa6908
+46,30 #fa6908
+47,30 #fa6908
+40,31 #fa6908
+41,31 #fa6908
+42,31 #fa6908
+43,31 #fa6908
+44,31 #fa6908
+45,31 #fa6908
+46,31 #fa6908
+40,32 #fa6908
+41,32 #fa6908
+42,32 #fa6908
+43,32 #fa6908
+44,32 #fa6908
+45,32 #fa6908
+46,32 #fa6908
+41,33 #fa6908
+42,33 #fa6908
+43,33 #fa6908
+44,33 #fa6908
+45,33 #fa6908
+43,34 #fa6908
+44,34 #fa6908
+## #fa7821 (key g) - 83 px
+41,12 #fa7821
+40,13 #fa7821
+41,13 #fa7821
+40,14 #fa7821
+41,14 #fa7821
+39,15 #fa7821
+40,15 #fa7821
+41,15 #fa7821
+38,16 #fa7821
+39,16 #fa7821
+40,16 #fa7821
+41,16 #fa7821
+38,17 #fa7821
+39,17 #fa7821
+40,17 #fa7821
+41,17 #fa7821
+38,18 #fa7821
+39,18 #fa7821
+40,18 #fa7821
+41,18 #fa7821
+42,18 #fa7821
+37,19 #fa7821
+38,19 #fa7821
+39,19 #fa7821
+40,19 #fa7821
+41,19 #fa7821
+42,19 #fa7821
+43,19 #fa7821
+37,20 #fa7821
+38,20 #fa7821
+39,20 #fa7821
+40,20 #fa7821
+41,20 #fa7821
+42,20 #fa7821
+43,20 #fa7821
+44,20 #fa7821
+38,21 #fa7821
+39,21 #fa7821
+40,21 #fa7821
+41,21 #fa7821
+42,21 #fa7821
+43,21 #fa7821
+44,21 #fa7821
+45,21 #fa7821
+39,22 #fa7821
+40,22 #fa7821
+41,22 #fa7821
+42,22 #fa7821
+43,22 #fa7821
+44,22 #fa7821
+45,22 #fa7821
+46,22 #fa7821
+47,22 #fa7821
+39,23 #fa7821
+40,23 #fa7821
+41,23 #fa7821
+42,23 #fa7821
+43,23 #fa7821
+44,23 #fa7821
+45,23 #fa7821
+46,23 #fa7821
+47,23 #fa7821
+40,24 #fa7821
+41,24 #fa7821
+42,24 #fa7821
+43,24 #fa7821
+44,24 #fa7821
+45,24 #fa7821
+46,24 #fa7821
+47,24 #fa7821
+42,25 #fa7821
+43,25 #fa7821
+44,25 #fa7821
+45,25 #fa7821
+46,25 #fa7821
+47,25 #fa7821
+48,25 #fa7821
+43,26 #fa7821
+44,26 #fa7821
+45,26 #fa7821
+46,26 #fa7821
+47,26 #fa7821
+48,26 #fa7821
+## #6c3a18 (key i) - 73 px
+26,22 #6c3a18
+27,22 #6c3a18
+25,23 #6c3a18
+26,23 #6c3a18
+27,23 #6c3a18
+28,23 #6c3a18
+24,24 #6c3a18
+25,24 #6c3a18
+26,24 #6c3a18
+27,24 #6c3a18
+35,24 #6c3a18
+23,25 #6c3a18
+24,25 #6c3a18
+25,25 #6c3a18
+32,25 #6c3a18
+23,26 #6c3a18
+24,26 #6c3a18
+22,27 #6c3a18
+27,27 #6c3a18
+35,27 #6c3a18
+24,28 #6c3a18
+32,28 #6c3a18
+21,29 #6c3a18
+21,30 #6c3a18
+27,31 #6c3a18
+35,31 #6c3a18
+24,32 #6c3a18
+32,32 #6c3a18
+33,32 #6c3a18
+30,33 #6c3a18
+22,35 #6c3a18
+23,35 #6c3a18
+24,35 #6c3a18
+25,35 #6c3a18
+26,35 #6c3a18
+27,35 #6c3a18
+28,35 #6c3a18
+21,36 #6c3a18
+22,36 #6c3a18
+23,36 #6c3a18
+24,36 #6c3a18
+25,36 #6c3a18
+26,36 #6c3a18
+27,36 #6c3a18
+28,36 #6c3a18
+20,37 #6c3a18
+21,37 #6c3a18
+22,37 #6c3a18
+26,37 #6c3a18
+27,37 #6c3a18
+28,37 #6c3a18
+18,38 #6c3a18
+19,38 #6c3a18
+20,38 #6c3a18
+21,38 #6c3a18
+28,38 #6c3a18
+16,39 #6c3a18
+17,39 #6c3a18
+18,39 #6c3a18
+19,39 #6c3a18
+15,40 #6c3a18
+16,40 #6c3a18
+17,40 #6c3a18
+14,41 #6c3a18
+15,41 #6c3a18
+16,41 #6c3a18
+13,42 #6c3a18
+14,42 #6c3a18
+15,42 #6c3a18
+12,43 #6c3a18
+13,43 #6c3a18
+14,43 #6c3a18
+12,44 #6c3a18
+## #3a2518 (key j) - 69 px
+40,7 #3a2518
+41,7 #3a2518
+42,7 #3a2518
+43,7 #3a2518
+44,7 #3a2518
+38,8 #3a2518
+39,8 #3a2518
+45,8 #3a2518
+46,8 #3a2518
+37,9 #3a2518
+47,9 #3a2518
+36,10 #3a2518
+48,10 #3a2518
+35,11 #3a2518
+34,12 #3a2518
+34,13 #3a2518
+33,14 #3a2518
+33,15 #3a2518
+52,15 #3a2518
+32,16 #3a2518
+33,16 #3a2518
+29,17 #3a2518
+30,17 #3a2518
+27,18 #3a2518
+28,18 #3a2518
+26,19 #3a2518
+25,20 #3a2518
+24,21 #3a2518
+23,22 #3a2518
+22,23 #3a2518
+22,24 #3a2518
+21,25 #3a2518
+21,26 #3a2518
+20,27 #3a2518
+20,28 #3a2518
+20,29 #3a2518
+20,30 #3a2518
+21,31 #3a2518
+21,32 #3a2518
+21,33 #3a2518
+20,34 #3a2518
+21,34 #3a2518
+19,35 #3a2518
+18,36 #3a2518
+17,37 #3a2518
+23,37 #3a2518
+24,37 #3a2518
+25,37 #3a2518
+16,38 #3a2518
+22,38 #3a2518
+26,38 #3a2518
+27,38 #3a2518
+14,39 #3a2518
+20,39 #3a2518
+21,39 #3a2518
+28,39 #3a2518
+13,40 #3a2518
+18,40 #3a2518
+19,40 #3a2518
+12,41 #3a2518
+17,41 #3a2518
+11,42 #3a2518
+16,42 #3a2518
+11,43 #3a2518
+15,43 #3a2518
+11,44 #3a2518
+13,44 #3a2518
+14,44 #3a2518
+12,45 #3a2518
+## #f59758 (key k) - 71 px
+43,11 #f59758
+44,11 #f59758
+45,11 #f59758
+46,11 #f59758
+47,11 #f59758
+42,12 #f59758
+43,12 #f59758
+44,12 #f59758
+45,12 #f59758
+46,12 #f59758
+47,12 #f59758
+48,12 #f59758
+49,12 #f59758
+42,13 #f59758
+43,13 #f59758
+44,13 #f59758
+45,13 #f59758
+46,13 #f59758
+47,13 #f59758
+48,13 #f59758
+49,13 #f59758
+42,14 #f59758
+43,14 #f59758
+44,14 #f59758
+47,14 #f59758
+48,14 #f59758
+49,14 #f59758
+50,14 #f59758
+42,15 #f59758
+43,15 #f59758
+48,15 #f59758
+49,15 #f59758
+50,15 #f59758
+42,16 #f59758
+43,16 #f59758
+44,16 #f59758
+47,16 #f59758
+48,16 #f59758
+49,16 #f59758
+50,16 #f59758
+42,17 #f59758
+43,17 #f59758
+44,17 #f59758
+45,17 #f59758
+46,17 #f59758
+47,17 #f59758
+48,17 #f59758
+49,17 #f59758
+50,17 #f59758
+43,18 #f59758
+44,18 #f59758
+45,18 #f59758
+46,18 #f59758
+47,18 #f59758
+48,18 #f59758
+49,18 #f59758
+50,18 #f59758
+44,19 #f59758
+45,19 #f59758
+46,19 #f59758
+47,19 #f59758
+48,19 #f59758
+49,19 #f59758
+45,20 #f59758
+46,20 #f59758
+47,20 #f59758
+48,20 #f59758
+49,20 #f59758
+46,21 #f59758
+47,21 #f59758
+48,21 #f59758
+## #523b19 (key l) - 7 px
+50,43 #523b19
+51,43 #523b19
+48,45 #523b19
+49,45 #523b19
+50,45 #523b19
+51,45 #523b19
+52,45 #523b19
+## #3a2c18 (key m) - 7 px
+48,40 #3a2c18
+47,41 #3a2c18
+53,45 #3a2c18
+49,46 #3a2c18
+50,46 #3a2c18
+51,46 #3a2c18
+52,46 #3a2c18
+## #885a15 (key n) - 20 px
+44,41 #885a15
+45,41 #885a15
+46,41 #885a15
+48,41 #885a15
+49,41 #885a15
+47,42 #885a15
+31,43 #885a15
+32,43 #885a15
+48,43 #885a15
+49,43 #885a15
+25,44 #885a15
+26,44 #885a15
+27,44 #885a15
+28,44 #885a15
+30,44 #885a15
+47,44 #885a15
+48,44 #885a15
+49,44 #885a15
+50,44 #885a15
+23,45 #885a15
+## #a64c10 (key o) - 51 px
+40,10 #a64c10
+41,10 #a64c10
+38,11 #a64c10
+39,11 #a64c10
+37,12 #a64c10
+36,13 #a64c10
+35,14 #a64c10
+34,16 #a64c10
+29,18 #a64c10
+30,18 #a64c10
+27,19 #a64c10
+28,19 #a64c10
+29,19 #a64c10
+30,19 #a64c10
+32,19 #a64c10
+33,19 #a64c10
+26,20 #a64c10
+27,20 #a64c10
+28,20 #a64c10
+29,20 #a64c10
+30,20 #a64c10
+25,21 #a64c10
+26,21 #a64c10
+24,22 #a64c10
+25,22 #a64c10
+23,23 #a64c10
+24,23 #a64c10
+23,24 #a64c10
+34,24 #a64c10
+22,25 #a64c10
+33,25 #a64c10
+22,26 #a64c10
+30,26 #a64c10
+21,27 #a64c10
+26,27 #a64c10
+21,28 #a64c10
+25,28 #a64c10
+33,28 #a64c10
+22,29 #a64c10
+23,29 #a64c10
+31,29 #a64c10
+28,30 #a64c10
+29,30 #a64c10
+36,30 #a64c10
+26,31 #a64c10
+25,32 #a64c10
+22,33 #a64c10
+23,33 #a64c10
+31,33 #a64c10
+28,34 #a64c10
+29,34 #a64c10
+## #c4550c (key p) - 34 px
+40,8 #c4550c
+41,8 #c4550c
+42,8 #c4550c
+43,8 #c4550c
+44,8 #c4550c
+38,9 #c4550c
+39,9 #c4550c
+40,9 #c4550c
+41,9 #c4550c
+42,9 #c4550c
+43,9 #c4550c
+44,9 #c4550c
+45,9 #c4550c
+46,9 #c4550c
+37,10 #c4550c
+38,10 #c4550c
+39,10 #c4550c
+36,11 #c4550c
+37,11 #c4550c
+35,12 #c4550c
+36,12 #c4550c
+35,13 #c4550c
+34,14 #c4550c
+34,15 #c4550c
+32,17 #c4550c
+33,17 #c4550c
+33,18 #c4550c
+31,23 #c4550c
+32,23 #c4550c
+33,23 #c4550c
+34,23 #c4550c
+35,23 #c4550c
+28,24 #c4550c
+27,25 #c4550c
+## #e1e1e1 (key r) - 37 px
+33,33 #e1e1e1
+34,33 #e1e1e1
+32,34 #e1e1e1
+33,34 #e1e1e1
+34,34 #e1e1e1
+35,34 #e1e1e1
+33,35 #e1e1e1
+34,35 #e1e1e1
+35,35 #e1e1e1
+36,35 #e1e1e1
+37,35 #e1e1e1
+38,35 #e1e1e1
+39,35 #e1e1e1
+40,35 #e1e1e1
+41,35 #e1e1e1
+42,35 #e1e1e1
+43,35 #e1e1e1
+44,35 #e1e1e1
+34,36 #e1e1e1
+35,36 #e1e1e1
+36,36 #e1e1e1
+37,36 #e1e1e1
+38,36 #e1e1e1
+39,36 #e1e1e1
+40,36 #e1e1e1
+41,36 #e1e1e1
+42,36 #e1e1e1
+43,36 #e1e1e1
+35,37 #e1e1e1
+36,37 #e1e1e1
+37,37 #e1e1e1
+38,37 #e1e1e1
+39,37 #e1e1e1
+40,37 #e1e1e1
+41,37 #e1e1e1
+42,37 #e1e1e1
+43,37 #e1e1e1
+## #edd3ac (key s) - 25 px
+30,34 #edd3ac
+31,34 #edd3ac
+29,35 #edd3ac
+30,35 #edd3ac
+31,35 #edd3ac
+32,35 #edd3ac
+29,36 #edd3ac
+30,36 #edd3ac
+31,36 #edd3ac
+32,36 #edd3ac
+29,37 #edd3ac
+30,37 #edd3ac
+31,37 #edd3ac
+29,38 #edd3ac
+30,38 #edd3ac
+36,38 #edd3ac
+37,38 #edd3ac
+38,38 #edd3ac
+39,38 #edd3ac
+40,38 #edd3ac
+41,38 #edd3ac
+36,39 #edd3ac
+37,39 #edd3ac
+38,39 #edd3ac
+39,39 #edd3ac
+## #898989 (key t) - 35 px
+42,10 #898989
+43,10 #898989
+44,10 #898989
+45,10 #898989
+46,10 #898989
+47,10 #898989
+40,11 #898989
+41,11 #898989
+42,11 #898989
+48,11 #898989
+39,12 #898989
+40,12 #898989
+39,13 #898989
+38,14 #898989
+39,14 #898989
+37,15 #898989
+38,15 #898989
+37,16 #898989
+37,17 #898989
+36,18 #898989
+37,18 #898989
+36,19 #898989
+36,20 #898989
+36,21 #898989
+36,22 #898989
+36,23 #898989
+36,24 #898989
+36,25 #898989
+36,26 #898989
+36,27 #898989
+37,27 #898989
+37,28 #898989
+37,29 #898989
+37,30 #898989
+38,30 #898989
+## #882c15 (key v) - 22 px
+49,11 #882c15
+50,12 #882c15
+50,13 #882c15
+51,14 #882c15
+51,15 #882c15
+51,18 #882c15
+50,19 #882c15
+50,20 #882c15
+49,21 #882c15
+48,22 #882c15
+48,23 #882c15
+48,24 #882c15
+49,25 #882c15
+49,26 #882c15
+49,27 #882c15
+48,28 #882c15
+48,29 #882c15
+48,30 #882c15
+47,31 #882c15
+47,32 #882c15
+46,33 #882c15
+45,34 #882c15
+## #f0e8db (key w) - 20 px
+36,31 #f0e8db
+37,31 #f0e8db
+38,31 #f0e8db
+35,32 #f0e8db
+36,32 #f0e8db
+37,32 #f0e8db
+38,32 #f0e8db
+39,32 #f0e8db
+35,33 #f0e8db
+36,33 #f0e8db
+37,33 #f0e8db
+38,33 #f0e8db
+39,33 #f0e8db
+40,33 #f0e8db
+36,34 #f0e8db
+37,34 #f0e8db
+38,34 #f0e8db
+39,34 #f0e8db
+40,34 #f0e8db
+41,34 #f0e8db
+## #989898 (key x) - 18 px
+45,35 #989898
+44,36 #989898
+44,37 #989898
+42,38 #989898
+43,38 #989898
+29,39 #989898
+30,39 #989898
+31,39 #989898
+32,39 #989898
+40,39 #989898
+41,39 #989898
+33,40 #989898
+34,40 #989898
+35,40 #989898
+36,40 #989898
+37,40 #989898
+38,40 #989898
+39,40 #989898
+## #f1a775 (key y) - 17 px
+32,41 #f1a775
+33,41 #f1a775
+34,41 #f1a775
+35,41 #f1a775
+36,41 #f1a775
+38,41 #f1a775
+32,42 #f1a775
+34,42 #f1a775
+36,42 #f1a775
+37,42 #f1a775
+38,42 #f1a775
+39,42 #f1a775
+40,42 #f1a775
+41,42 #f1a775
+37,43 #f1a775
+39,43 #f1a775
+41,43 #f1a775
+## #141414 (key B) - 7 px
+45,14 #141414
+46,14 #141414
+44,15 #141414
+46,15 #141414
+47,15 #141414
+45,16 #141414
+46,16 #141414
+## #323232 (key C) - 5 px
+51,16 #323232
+52,16 #323232
+53,16 #323232
+51,17 #323232
+52,17 #323232
+## #eeb691 (key D) - 2 px
+39,31 #eeb691
+42,34 #eeb691
+## #f0f0f0 (key E) - 1 px
+45,15 #f0f0f0

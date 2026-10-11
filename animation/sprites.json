@@ -1,0 +1,14 @@
+{
+  "traveler": {
+    "sheet": "world/assets/traveler.png",
+    "gif": "animation/traveler_idle.gif",
+    "frame": 32,
+    "frames": 1,
+    "rows": [
+      "right",
+      "left (mirrored)"
+    ],
+    "note": "hand-drawn sprite moving across hand-drawn grass; walk frames swap in when Artist 1 draws them",
+    "live_gif": "animation/traveler_live.gif"
+  }
+}

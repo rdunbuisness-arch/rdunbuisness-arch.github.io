@@ -1,0 +1,157 @@
+{
+ "org": {
+  "top": "Ryan",
+  "ceo": "CEO",
+  "director": "Director",
+  "branches": [
+   {
+    "name": "Branch 1",
+    "roles": [
+     "Reference 1",
+     "Artist 1",
+     "Checker 1"
+    ]
+   },
+   {
+    "name": "Branch 2",
+    "roles": [
+     "Curator 2",
+     "Artist 2",
+     "Critic 2"
+    ]
+   }
+  ],
+  "ceo_teams": [
+   {
+    "name": "Animation Branch",
+    "roles": [
+     "Animator",
+     "Animation Critic"
+    ],
+    "note": "Walk cycles from top-scored art"
+   },
+   {
+    "name": "Software Team",
+    "roles": [
+     "World Engineer",
+     "Playtester"
+    ],
+    "note": "Browser world at /world/"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-11 12:40 PT",
+   "decision": "Director now reports to the CEO; both art branches continue under the Director."
+  },
+  {
+   "date": "2026-10-11 12:42 PT",
+   "decision": "Animation Branch created from the top-scored art: Fly Agaric (9/9), Lighthouse (9/9), Robin.",
+   "progress": "Fly Agaric, Brown Cap and Robin walk cycles delivered (4 directions x 6 frames)."
+  },
+  {
+   "date": "2026-10-11 12:50 PT",
+   "decision": "Software Team builds the playable pixel world with the lighthouse as a coastal landmark.",
+   "progress": "World live at /world/ \u2014 walkable, characters wander, switch with C/Tab."
+  },
+  {
+   "date": "2026-10-11 12:55 PT",
+   "decision": "Studio keeps producing; new hero pieces (e.g. the 64x64 hero robin) flow into Animation next."
+  },
+  {
+   "date": "2026-10-11 12:55 PT",
+   "decision": "Unified org: one chart under Ryan and CEO"
+  },
+  {
+   "date": "2026-10-11 13:05 PT",
+   "decision": "First hand-drawn assets live in world: traveler (9/10) and grass tile (9)",
+   "progress": "Traveler is the default player as a static hand-drawn sprite with a gentle bob (every frame must be hand-drawn); walk frames named branch1/traveler_walk_<dir>_f<N>_v<V>.png load automatically when Artist 1 draws them. Hand-drawn grass is now the base ground tile."
+  },
+  {
+   "date": "2026-10-11 13:08 PT",
+   "decision": "Created Animator, Animation Critic, World Engineer, Playtester bots",
+   "progress": "Animation Critic reports to Animator; Playtester reports to World Engineer."
+  },
+  {
+   "date": "2026-10-11 13:02 PT",
+   "decision": "CEO: code-drawn characters (fly agaric, robin, brown cap walkers and their sheets) removed from the world; the hand-drawn traveler is the only character. Traveler walk cycle is 8 frames per direction; left may mirror hand-drawn right frames.",
+   "progress": "C/Tab is a no-op with one character; shoot.py no longer depends on removed characters."
+  },
+  {
+   "date": "2026-10-11 13:02 PT",
+   "decision": "Lighthouse headland reshaped into an organic rock outcrop with sand beach rim, jagged terrain edges, cliff shading and surf on all shores.",
+   "progress": "No Branch 2 path/water/tree/bush/rock tiles have passed review yet (only grass v2-v7 flagged 'not hand-drawn', dirt v1-v3 in progress), so scenery stays placeholder; no grass variants mixed in. Portal captions now pluralize (1 frame / N frames)."
+  },
+  {
+   "date": "2026-10-11 13:03 PT",
+   "decision": "Director approved Branch 2 dirt tile v3; it is now the world's path tile.",
+   "progress": "Copied byte-identical to world/assets/dirt_tile.png (not a clean 16x pixel grid, so not downscaled); rendered with smoothing off, 2x2 world tiles per image. Code-drawn path is only a fallback while loading. Path/grass edges are still hard tile steps."
+  },
+  {
+   "date": "2026-10-11 13:10 PT",
+   "decision": "Scripted (code-drawn) walkers removed; the hand-drawn traveler is the only character. Portal now leads with a live progress section.",
+   "progress": "'Live now' shows the traveler walking on hand-drawn grass plus the latest world screenshot; every portal section refreshes itself every 10s."
+  },
+  {
+   "date": "2026-10-11 13:08 PT",
+   "decision": "Playtest fixes: lighthouse base is solid and y-sorted; all water impassable (feet hitbox) and rock edges facing the sea are cliffs; rectangular east spur clipped; dirt path rebuilt as a connected 2-tile-wide path with orthogonal turns (one dirt image per aligned 2x2 block, rotated 90deg for horizontal runs, pixels untouched); tighter tree-trunk collision; rock seam lines removed; favicon added. Every world build now updates the portal.",
+   "progress": "Removed characters cleared from animation/sprites.json; portal Live section shows this build's status. Corners/junctions still need hand-drawn path corner and T tiles."
+  },
+  {
+   "date": "2026-10-11 13:10 PT",
+   "decision": "Director added Branch 3 (Gameplay art): Artist 3 and Checker 3, taking item/NPC/prop requests from Game Designer, gameplay art first. Same rule: pixels clicked in Ryan's app, exported via its PNG button.",
+   "progress": "Branch 3 chat created; awaiting Game Designer's first list."
+  },
+  {
+   "date": "2026-10-11 13:14 PT",
+   "decision": "Art rule loosened by Ryan: any PNG exported from his app counts. Branch 2 grass v2-v7 mixed into the ground with the base grass (seeded, stable per 2x2 block). Director import rule: every imported 512px tile gets a native 32x32 copy in world/assets made by sampling each 16px block's centre and snapping to the painted palette; branch PNGs untouched.",
+   "progress": "Dirt v3 and grass v2-v7 imported as native 32x32 (dirt clean, 8 colours; grass 3 colours each). Dirt rotated clockwise for horizontal runs. East-tip dark cliff stripe removed. No Branch 2 path-corner, water, tree, bush or rock tiles exist yet; tile_grass_b v1-v2 exist but were not requested."
+  },
+  {
+   "date": "2026-10-11 13:23 PT",
+   "decision": "Approved Branch 2 path corners (ne, es, sw, wn) and T-junction (t_n, opens W/E/S) v1, tree v1, grass_b v1/v2 and Branch 1 traveler walk-right v2 are now in the world; all imported as native 32x32 centre-sampled, palette-snapped copies (world/snap.py), sources untouched.",
+   "progress": "Path re-laid so every turn/junction is a supported shape and picks its art from neighbouring blocks; trees use tree v1 (grass background cut by a hull mask) with the same collision and y-sort; traveler walk-right frames via animation/traveler.py, left mirrored, up/down fall back to the static sprite. Fixed a portal crash (REFS used before declaration). shoot.py adds traveler_walk_lr.gif."
+  },
+  {
+   "date": "2026-10-11 13:26 PT",
+   "decision": "Branch 2 water v1, water shore v2 and rock v3 in the world (native 32x32 via snap.py, sources untouched).",
+   "progress": "Water v1 renders the sea and pond (2x2 tiles per image) under the existing surf/sparkle; shore v2 (unrotated) on pond tiles with grass directly above; rock v3 is a boulder on grass, so it's used as solid, y-sorted boulder props (grass cut out) on the headland and meadow rather than as headland ground, which stays placeholder grey. Collision kept."
+  },
+  {
+   "date": "2026-10-11 13:28 PT",
+   "decision": "Swapped in latest Branch 2 art: tree v3 (newest available; v2 superseded), bush v1, path bends v2 (ne/es/sw/wn/t_n).",
+   "progress": "world/import_tiles.py picks the highest v per tile, snaps to native 32x32 and hull-masks sprites; 26 solid, y-sorted bushes added (the world had no placeholder bushes). Zero console errors."
+  },
+  {
+   "date": "2026-10-11 13:30 PT",
+   "decision": "Routine check: swapped in the newest Branch 2 art that landed after the 13:28 build: bush v2, rock v4 (boulders), water v2 and water shore v3.",
+   "progress": "Native 32x32 snapped copies via world/import_tiles.py + snap.py, sources untouched; rock re-cut from its grass background. Playtest script clean (zero console errors, never ends on water). Still waiting on hand-drawn art for: traveler walk up/down frames, fox walk frames (fox v1/v2 are stills), deer (none yet), hero robin walk frames (robin_hero v1-v3 are stills)."
+  },
+  {
+   "date": "2026-10-11 13:34 PT",
+   "decision": "Score-9 art in the world: water v2 + water b v1 (seeded per-block mix), water shore v4, tree v4, final bush v4 from Branch 3.",
+   "progress": "import_tiles.py now also picks water/water_b/water_shore and the highest Branch 3 bush (magenta keyed out after centre-sampling); sprite cut uses a border flood-fill (hull fallback). Rock v6 and side/corner shore tiles pending. Zero console errors."
+  },
+  {
+   "date": "2026-10-11 13:39 PT",
+   "decision": "Final rock v6 used for all boulders (it is a single boulder, so the headland ground stays placeholder grey). Sea favours fish-free water_b; full water v2/water_b tiles with fish kept to ~10% of open sea. Pond shores use shore v4 (grass N), shore_n v1 (grass S), shore_e v2 (grass W), shore_w v2 (grass E).",
+   "progress": "import_tiles.py now covers rock and shore_e/w/n. Pond corners still use a side tile until the corner (oc_*) tiles pass. Zero console errors."
+  },
+  {
+   "date": "2026-10-11 13:49 PT",
+   "decision": "Routine check: pond corner shores swapped into the world. Convex corners use outer oc tl/tr/bl/br v4 mixed per tile with oc se/sw/ne/nw v2 (the same corner drawn a second way). Concave corners use inner ic tl/tr/bl/br v2. Side shores mix shore_e/w v2 with the new shore_e_b/w_b v1 per 2x2 block. Water is now v3 and water_b v2.",
+   "progress": "index.html now picks each pond tile from its neighbours (two land sides = outer corner, land only on a diagonal = inner corner, otherwise a side tile) and samples corner tiles from their centred 16px square. Corners join the side shores with no seams (shots/routine_1345_pond_corners.png). Water still can't be walked on. Playtest shoot.py: zero console errors, ended on water 0. Still waiting on traveler walk up/down frames, fox walk frames, deer, and hero robin walk frames."
+  },
+  {
+   "date": "2026-10-11 13:52 PT",
+   "decision": "Traveler is 8-way (Ryan): diagonal input moves at normalized speed; directions down/up/right/left/downright/upright/downleft/upleft with left-side mirrors. Pond gets outer corners oc_tl/tr/bl/br v4, inner corners ic_tl/tr/bl/br v2, and shore_e_b/w_b v1 mixed with the v2 sides; sea/pond use water v3 + water b v2 (no fish) as a plain 50/50 mix.",
+   "progress": "animation/traveler.py (run by server.py each scan) now picks walk frames from branch1 and branch2 for all 8 directions, newest v per direction. Until drawn: diagonals use the right/left walk, up/down use the static sprite with bob. Zero console errors."
+  },
+  {
+   "date": "2026-10-11 14:01 PT",
+   "decision": "Branch 2 diagonal traveler walks (downright, upright f1-8 v1) are live in the world and Spore Run; left diagonals mirror them. Off-white #E6E1D4 backgrounds are keyed out after centre-sampling.",
+   "progress": "animation/traveler.py keys #E6E1D4 (tolerance 24) and picks up branch2 walks automatically; server.py restarted so the running scan loads it. Spore Run build_manifest marks branch2 walks with key #E6E1D4 and its keyBg accepts hex keys. Added favicon.ico at the studio root; portal references.json fetch now guards non-OK/invalid responses. Both shoot scripts: zero errors."
+  }
+ ]
+}

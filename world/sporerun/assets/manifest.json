@@ -1,0 +1,215 @@
+{
+ "grass": {
+  "file": "tile_grass_v7.png"
+ },
+ "grassB": {
+  "file": "tile_grass_b_v2.png"
+ },
+ "lighthouse": {
+  "file": "lighthouse.png"
+ },
+ "dirtpatch": {
+  "file": "dirtpatch_f1_v3.png",
+  "key": "magenta"
+ },
+ "mush1": {
+  "file": "mushroom_f1_v4.png",
+  "key": "magenta"
+ },
+ "mush2": {
+  "file": "mushroom_f2_v4.png",
+  "key": "magenta"
+ },
+ "dew1": {
+  "file": "dewdrop_f1_v2.png",
+  "key": "magenta"
+ },
+ "dew2": {
+  "file": "dewdrop_f2_v2.png",
+  "key": "magenta"
+ },
+ "puff1": {
+  "file": "sporepuff_f1_v3.png",
+  "key": "magenta"
+ },
+ "puff2": {
+  "file": "sporepuff_f2_v3.png",
+  "key": "magenta"
+ },
+ "puff3": {
+  "file": "sporepuff_f3_v3.png",
+  "key": "magenta"
+ },
+ "robin1": {
+  "file": "robin_hop_f1_v2.png",
+  "key": "magenta"
+ },
+ "robin2": {
+  "file": "robin_hop_f2_v2.png",
+  "key": "magenta"
+ },
+ "robinPeck": {
+  "file": "robin_peck_f1_v4.png",
+  "key": "magenta"
+ },
+ "clock": {
+  "file": "clock_icon_v3.png",
+  "key": "magenta"
+ },
+ "panel": {
+  "file": "panel9slice_48_v2.png",
+  "key": "magenta",
+  "grid": 48,
+  "inset": 6
+ },
+ "rock": {
+  "file": "tile_rock_v6_cut.png",
+  "bbox": [
+   7,
+   13,
+   24,
+   26
+  ]
+ },
+ "tree": {
+  "file": "tile_tree_v4_cut.png",
+  "bbox": [
+   4,
+   2,
+   27,
+   27
+  ]
+ },
+ "bush": {
+  "file": "bush_v4.png",
+  "key": "magenta",
+  "bbox": [
+   2,
+   5,
+   30,
+   29
+  ]
+ },
+ "logoL": {
+  "file": "logo_left_v5.png",
+  "key": "magenta",
+  "grid": 48
+ },
+ "logoR": {
+  "file": "logo_right_v5.png",
+  "key": "magenta",
+  "grid": 48
+ },
+ "feather1": {
+  "file": "featherburst_f1_v2.png",
+  "key": "magenta"
+ },
+ "feather2": {
+  "file": "featherburst_f2_v2.png",
+  "key": "magenta"
+ },
+ "firefly1": {
+  "file": "firefly_f1_v2.png",
+  "key": "magenta"
+ },
+ "firefly2": {
+  "file": "firefly_f2_v2.png",
+  "key": "magenta"
+ },
+ "tr1": {
+  "file": "traveler_walk_right_f1_v2.png",
+  "key": "corner"
+ },
+ "tr2": {
+  "file": "traveler_walk_right_f2_v2.png",
+  "key": "corner"
+ },
+ "tr3": {
+  "file": "traveler_walk_right_f3_v2.png",
+  "key": "corner"
+ },
+ "tr4": {
+  "file": "traveler_walk_right_f4_v2.png",
+  "key": "corner"
+ },
+ "tr5": {
+  "file": "traveler_walk_right_f5_v2.png",
+  "key": "corner"
+ },
+ "tr6": {
+  "file": "traveler_walk_right_f6_v2.png",
+  "key": "corner"
+ },
+ "tr7": {
+  "file": "traveler_walk_right_f7_v2.png",
+  "key": "corner"
+ },
+ "tr8": {
+  "file": "traveler_walk_right_f8_v2.png",
+  "key": "corner"
+ },
+ "downright1": {
+  "file": "traveler_walk_downright_f1_v1.png",
+  "key": "#E6E1D4"
+ },
+ "downright2": {
+  "file": "traveler_walk_downright_f2_v1.png",
+  "key": "#E6E1D4"
+ },
+ "downright3": {
+  "file": "traveler_walk_downright_f3_v1.png",
+  "key": "#E6E1D4"
+ },
+ "downright4": {
+  "file": "traveler_walk_downright_f4_v1.png",
+  "key": "#E6E1D4"
+ },
+ "downright5": {
+  "file": "traveler_walk_downright_f5_v1.png",
+  "key": "#E6E1D4"
+ },
+ "downright6": {
+  "file": "traveler_walk_downright_f6_v1.png",
+  "key": "#E6E1D4"
+ },
+ "downright7": {
+  "file": "traveler_walk_downright_f7_v1.png",
+  "key": "#E6E1D4"
+ },
+ "downright8": {
+  "file": "traveler_walk_downright_f8_v1.png",
+  "key": "#E6E1D4"
+ },
+ "upright1": {
+  "file": "traveler_walk_upright_f1_v1.png",
+  "key": "#E6E1D4"
+ },
+ "upright2": {
+  "file": "traveler_walk_upright_f2_v1.png",
+  "key": "#E6E1D4"
+ },
+ "upright3": {
+  "file": "traveler_walk_upright_f3_v1.png",
+  "key": "#E6E1D4"
+ },
+ "upright4": {
+  "file": "traveler_walk_upright_f4_v1.png",
+  "key": "#E6E1D4"
+ },
+ "upright5": {
+  "file": "traveler_walk_upright_f5_v1.png",
+  "key": "#E6E1D4"
+ },
+ "upright6": {
+  "file": "traveler_walk_upright_f6_v1.png",
+  "key": "#E6E1D4"
+ },
+ "upright7": {
+  "file": "traveler_walk_upright_f7_v1.png",
+  "key": "#E6E1D4"
+ },
+ "upright8": {
+  "file": "traveler_walk_upright_f8_v1.png",
+  "key": "#E6E1D4"
+ }
+}
