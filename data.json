@@ -1307,6 +1307,22 @@
     "branch1/traveler_walk_up_f1_v2.png": "1791753246918106139:22116",
     "branch1/traveler_walk_up_f2_v2.png": "1791753254846106139:21828",
     "branch1/traveler_walk_up_f3_v2.png": "1791753261822106139:22099",
-    "branch1/traveler_walk_up_f4_v2.png": "1791753269238106139:21909"
+    "branch1/traveler_walk_up_f4_v2.png": "1791753269238106139:21909",
+    "branch2/traveler_walk_downright_f1_v4.png": "1791753383158106139:22515",
+    "branch2/traveler_walk_downright_f2_v4.png": "1791753383162106139:22555",
+    "branch2/traveler_walk_downright_f3_v4.png": "1791753383170106139:22607",
+    "branch2/traveler_walk_downright_f4_v4.png": "1791753383174106139:22490",
+    "branch2/traveler_walk_downright_f5_v4.png": "1791753383178106139:22620",
+    "branch2/traveler_walk_downright_f6_v4.png": "1791753383182106139:22429",
+    "branch2/traveler_walk_downright_f7_v4.png": "1791753383186106139:22420",
+    "branch2/traveler_walk_downright_f8_v4.png": "1791753383190106139:22307",
+    "branch2/traveler_walk_upright_f1_v4.png": "1791753383194106139:22424",
+    "branch2/traveler_walk_upright_f2_v4.png": "1791753383198106139:22637",
+    "branch2/traveler_walk_upright_f3_v4.png": "1791753383206106139:22684",
+    "branch2/traveler_walk_upright_f4_v4.png": "1791753383210106139:22589",
+    "branch2/traveler_walk_upright_f5_v4.png": "1791753383214106139:22571",
+    "branch2/traveler_walk_upright_f6_v4.png": "1791753383218106139:22470",
+    "branch2/traveler_walk_upright_f7_v4.png": "1791753383222106139:22492",
+    "branch2/traveler_walk_upright_f8_v4.png": "1791753383226106139:22493"
   }
 }
