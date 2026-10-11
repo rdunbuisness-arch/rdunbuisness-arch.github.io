@@ -162,6 +162,11 @@
    "date": "2026-10-11 14:09 PT",
    "decision": "Rock-to-grass corners in the world: rockgrass_oc_tl/tr/bl/br v1 and rockgrass_ic_tl/tr/bl/br v1 (rock = lake, pond convention).",
    "progress": "Headland edges pick outer corner / side / inner corner like the pond. Rock-to-sand seam: the placeholder sand now laps jaggedly onto the rock instead of flat grey strips onto the sand (art files untouched). import_tiles.py covers the 8 corners. Zero console errors."
+  },
+  {
+   "date": "2026-10-11 14:19 PT",
+   "decision": "Studio-made fox (walk right f1-8 v2, mirrored) and fly agaric (walk right/left/down/up f1-4 v2) wander the world as NPCs alongside the traveler, who stays the player. Sand is now Branch 2 art (sand v6 + sand b v2) with beach shore v7 on sand/rock-to-sea edges, so no code-drawn ground remains.",
+   "progress": "NPCs: ~8 fps, collision, y-sort, idle pauses, never on water (checked). import_tiles.py builds npcs.json and sand/beach (newest v); all keying samples the corner colour (magenta #FA08FA, lavender, off-white #E6E1D4) with tolerance. traveler.py now uses up-right v4 (magenta) and down/up v2; up-left mirrors up-right. Zero console errors."
   }
  ]
 }
