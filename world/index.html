@@ -74,19 +74,22 @@ let DIRT_H=null;function dirtH(){const di=SHEETS.dirt;if(DIRT_H||!di.complete||!
 let TRAV={base:null,frames:{}};const TIMG={};
 function loadTrav(){fetch("assets/traveler.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(m=>{if(JSON.stringify(m)===JSON.stringify(TRAV))return;const v="?v="+encodeURIComponent(m.sig||"");TRAV=m;TIMG.base=img("traveler.png"+v);for(const d in m.frames)TIMG[d]=m.frames[d].map(f=>img(f.replace("assets/","")+v))}).catch(()=>{})}
 loadTrav();setInterval(loadTrav,10000);
-const NAMES={traveler:"Traveler"};
+const NAMES={traveler:"Traveler",fox:"Fox",fly_agaric:"Fly Agaric"};
 const chars=[];
 function spawn(kind,tx,ty){const c={kind,x:tx*T+8,y:ty*T+8,dir:"down",f:0,ft:0,moving:false,sp:44,ai:{t:0,dx:0,dy:0}};chars.push(c);return c}
 spawn("traveler",12,17);
+// studio-made NPCs (Branch 3): frames listed in assets/npcs.json by import_tiles.py; they wander, collide, y-sort, pause
+const NPCI={};fetch("assets/npcs.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():{}).then(m=>{for(const k in m){NPCI[k]={};for(const d in m[k])NPCI[k][d]=m[k][d].map(f=>img(f.replace("assets/","")))}}).catch(()=>{});
+[["fox",18,14],["fox",40,30],["fly_agaric",14,21],["fly_agaric",28,12],["fly_agaric",44,26]].forEach(([k,x,y])=>{const c=spawn(k,x,y);c.sp=k==="fox"?40:22;c.npc=true});
 let player=0;const whoEl=document.getElementById("who");const setWho=()=>whoEl.textContent="Playing: "+NAMES[chars[player].kind];setWho();
 const keys={};
-addEventListener("keydown",e=>{keys[e.key.toLowerCase()]=true;if(e.key==="Tab"||e.key.toLowerCase()==="c"){e.preventDefault();if(chars.length>1){player=(player+1)%chars.length;setWho()}}if(e.key.startsWith("Arrow"))e.preventDefault()});
+addEventListener("keydown",e=>{keys[e.key.toLowerCase()]=true;if(e.key==="Tab"||e.key.toLowerCase()==="c"){e.preventDefault();/* traveler is always the player; NPCs are not switchable */}if(e.key.startsWith("Arrow"))e.preventDefault()});
 addEventListener("keyup",e=>keys[e.key.toLowerCase()]=false);
 function move(c,dx,dy,dt){c.moving=!!(dx||dy);if(!c.moving){c.f=0;return}
  const l=Math.hypot(dx,dy);dx/=l;dy/=l;const nx=c.x+dx*c.sp*dt,ny=c.y+dy*c.sp*dt;let hit=false;
  if(!solid(nx,c.y)&&nx>4&&nx<MW*T-4)c.x=nx;else hit=true;if(!solid(c.x,ny)&&ny>4&&ny<MH*T-2)c.y=ny;else hit=true;
  const ax=Math.abs(dx)>.38?(dx<0?"left":"right"):"",ay=Math.abs(dy)>.38?(dy<0?"up":"down"):"";c.dir=ax&&ay?ay+ax:(ax||ay);
- c.ft+=dt;c.face=c.dir.endsWith("left")?"left":c.dir.endsWith("right")?"right":(c.face||"right");const fd=.1;while(c.ft>fd){c.ft-=fd;c.f=(c.f+1)%NF}return hit}
+ c.ft+=dt;c.face=c.dir.endsWith("left")?"left":c.dir.endsWith("right")?"right":(c.face||"right");const fd=c.npc?.125:.1;while(c.ft>fd){c.ft-=fd;c.f=(c.f+1)%NF}return hit}
 function update(dt){chars.forEach((c,i)=>{
  if(i===player){let dx=(keys.arrowright||keys.d?1:0)-(keys.arrowleft||keys.a?1:0),dy=(keys.arrowdown||keys.s?1:0)-(keys.arrowup||keys.w?1:0);move(c,dx,dy,dt);return}
  const a=c.ai;a.t-=dt;if(a.t<=0){if(Math.random()<.35){a.dx=a.dy=0;a.t=1+Math.random()*2}else{const an=Math.random()*6.28;a.dx=Math.cos(an);a.dy=Math.sin(an);a.t=1+Math.random()*3}}
@@ -117,6 +120,12 @@ function drawChar(c,i){const im=SHEETS[c.kind];const x=Math.round(c.x-camX),y=Ma
   let t=null,flip=false;if(r){t=r[0][c.f%r[0].length];flip=r[1]}
   const bob=(!t&&c.moving)?Math.round((Math.sin(time*10)+1)/2):0;if(!t){t=TIMG.base;flip=(c.face||"right")==="left"}
   if(t&&t.complete&&t.naturalWidth){ctx.save();if(flip){ctx.translate(x,0);ctx.scale(-1,1);ctx.drawImage(t,-16,y-29-bob,32,32)}else ctx.drawImage(t,x-16,y-29-bob,32,32);ctx.restore()}}
+  else if(NPCI[c.kind]){const F=NPCI[c.kind],d=c.dir||"right",hz=d.endsWith("left")?"left":d.endsWith("right")?"right":null;
+  // own direction frames if drawn; diagonals/vertical without frames use left/right by facing; left mirrors right
+  let key=F[d]&&F[d].length?d:(F[hz]&&hz)||(d.startsWith("up")&&F.up?"up":d.startsWith("down")&&F.down?"down":(c.face||"right"));let fr=F[key],flip=false;
+  if(!fr||!fr.length){const m=key==="left"?"right":"left";fr=F[m];flip=true}
+  const t=fr&&fr.length?fr[(c.moving?c.f:0)%fr.length]:null;
+  if(t&&t.complete&&t.naturalWidth){ctx.save();if(flip){ctx.translate(x,0);ctx.scale(-1,1);ctx.drawImage(t,-16,y-29,32,32)}else ctx.drawImage(t,x-16,y-29,32,32);ctx.restore()}}
  if(i===player){ctx.fillStyle="#ffe066";const b=Math.round(Math.sin(time*5));ctx.fillRect(x-1,y-35+b,3,2);ctx.fillRect(x,y-33+b,1,1)}}
 function render(){
  const p=chars[player];camX+=(p.x-VW/2-camX)*.12;camY+=(p.y-VH/2-camY)*.12;camX=Math.max(0,Math.min(MW*T-VW,camX));camY=Math.max(0,Math.min(MH*T-VH,camY));

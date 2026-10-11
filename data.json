@@ -1016,6 +1016,12 @@
           "img": "img/tile-beach-shore_v5.png",
           "scores": {},
           "note": ""
+        },
+        {
+          "v": 6,
+          "img": "img/tile-beach-shore_v6.png",
+          "scores": {},
+          "note": ""
         }
       ]
     },
@@ -1053,6 +1059,12 @@
         {
           "v": 5,
           "img": "img/tile-sand_v5.png",
+          "scores": {},
+          "note": ""
+        },
+        {
+          "v": 6,
+          "img": "img/tile-sand_v6.png",
           "scores": {},
           "note": ""
         }
@@ -1251,6 +1263,19 @@
     "branch1/traveler_walk_down_f2_v1.png": "1791752908566106139:21893",
     "branch1/traveler_walk_down_f3_v1.png": "1791752916670106139:22067",
     "branch1/traveler_walk_down_f4_v1.png": "1791752922378106139:21908",
-    "branch1/traveler_walk_up_f1_v1.png": "1791752929970106139:21977"
+    "branch1/traveler_walk_up_f1_v1.png": "1791752929970106139:21977",
+    "branch1/traveler_walk_up_f2_v1.png": "1791752935086106139:21843",
+    "branch1/traveler_walk_up_f3_v1.png": "1791752942370106139:21970",
+    "branch1/traveler_walk_up_f4_v1.png": "1791752949342106139:21872",
+    "branch2/tile_beach_shore_v6.png": "1791752951294106139:22260",
+    "branch2/tile_sand_v6.png": "1791752951290106139:21941",
+    "branch1/traveler_walk_right_f1_v3.png": "1791752993230106139:22610",
+    "branch1/traveler_walk_right_f2_v3.png": "1791752998442106139:22531",
+    "branch1/traveler_walk_right_f3_v3.png": "1791753004722106139:22405",
+    "branch1/traveler_walk_right_f4_v3.png": "1791753010938106139:22601",
+    "branch1/traveler_walk_right_f5_v3.png": "1791753017186106139:22593",
+    "branch1/traveler_walk_right_f6_v3.png": "1791753023778106139:22605",
+    "branch1/traveler_walk_right_f7_v3.png": "1791753030034106139:22578",
+    "branch1/traveler_walk_right_f8_v3.png": "1791753037590106139:22546"
   }
 }

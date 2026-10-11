@@ -1,0 +1,40 @@
+{
+ "fox": {
+  "right": [
+   "assets/npc_fox_right_f1.png",
+   "assets/npc_fox_right_f2.png",
+   "assets/npc_fox_right_f3.png",
+   "assets/npc_fox_right_f4.png",
+   "assets/npc_fox_right_f5.png",
+   "assets/npc_fox_right_f6.png",
+   "assets/npc_fox_right_f7.png",
+   "assets/npc_fox_right_f8.png"
+  ]
+ },
+ "fly_agaric": {
+  "right": [
+   "assets/npc_fly_agaric_right_f1.png",
+   "assets/npc_fly_agaric_right_f2.png",
+   "assets/npc_fly_agaric_right_f3.png",
+   "assets/npc_fly_agaric_right_f4.png"
+  ],
+  "up": [
+   "assets/npc_fly_agaric_up_f1.png",
+   "assets/npc_fly_agaric_up_f2.png",
+   "assets/npc_fly_agaric_up_f3.png",
+   "assets/npc_fly_agaric_up_f4.png"
+  ],
+  "down": [
+   "assets/npc_fly_agaric_down_f1.png",
+   "assets/npc_fly_agaric_down_f2.png",
+   "assets/npc_fly_agaric_down_f3.png",
+   "assets/npc_fly_agaric_down_f4.png"
+  ],
+  "left": [
+   "assets/npc_fly_agaric_left_f1.png",
+   "assets/npc_fly_agaric_left_f2.png",
+   "assets/npc_fly_agaric_left_f3.png",
+   "assets/npc_fly_agaric_left_f4.png"
+  ]
+ }
+}

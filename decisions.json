@@ -157,6 +157,11 @@
    "date": "2026-10-11 14:05 PT",
    "decision": "Headland grey ground is now Branch 2 art: tile_rockground_v2 + tile_rockground_b_v1 mixed per 2x2 block, with rockgrass sides (s v5 = grass north, n v3 = grass south, e v3 = grass west, w v3 = grass east) on rock/grass edges.",
    "progress": "Headland's landward side now meets grass (sand rim only seaward); enclosed sand pockets filled with rock; flat grey corner blobs removed. Corners use the nearest side tile until corner art passes. import_tiles.py covers rockground, rockground_b, rockgrass_n/s/e/w. Zero console errors."
+  },
+  {
+   "date": "2026-10-11 14:09 PT",
+   "decision": "Rock-to-grass corners in the world: rockgrass_oc_tl/tr/bl/br v1 and rockgrass_ic_tl/tr/bl/br v1 (rock = lake, pond convention).",
+   "progress": "Headland edges pick outer corner / side / inner corner like the pond. Rock-to-sand seam: the placeholder sand now laps jaggedly onto the rock instead of flat grey strips onto the sand (art files untouched). import_tiles.py covers the 8 corners. Zero console errors."
   }
  ]
 }
