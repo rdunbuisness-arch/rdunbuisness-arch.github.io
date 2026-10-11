@@ -1212,6 +1212,9 @@
     "branch2/tile_rockgrass_oc_bl_v1.png": "1791752586574106139:22401",
     "branch2/tile_rockgrass_oc_br_v1.png": "1791752586574106139:22023",
     "branch2/tile_rockgrass_oc_tl_v1.png": "1791752586570106139:22091",
-    "branch2/tile_rockgrass_oc_tr_v1.png": "1791752586574106139:22306"
+    "branch2/tile_rockgrass_oc_tr_v1.png": "1791752586574106139:22306",
+    "branch2/traveler_walk_downright_f1_v2.png": "1791752612974106139:22360",
+    "branch2/traveler_walk_downright_f2_v2.png": "1791752612978106139:22446",
+    "branch2/traveler_walk_downright_f3_v2.png": "1791752612982106139:22208"
   }
 }
