@@ -1,0 +1,80 @@
+{
+ "tile": 32,
+ "panel": {
+  "file": "assets/panel.png",
+  "src": "panel9slice_48_v2.png",
+  "grid": 48,
+  "inset": 6
+ },
+ "clock": {
+  "file": "assets/clock.png",
+  "src": "clock_icon_v3.png",
+  "grid": 32
+ },
+ "tiles": {
+  "grass": "assets/grass_tile.png",
+  "grass_b_v2": "assets/tile_grass_b_v2.png",
+  "dirt": "assets/dirt_tile.png",
+  "path_ne": "assets/path_ne.png",
+  "path_es": "assets/path_es.png",
+  "path_sw": "assets/path_sw.png",
+  "path_wn": "assets/path_wn.png",
+  "path_t_n": "assets/path_t_n.png",
+  "water": "assets/water.png",
+  "water_b": "assets/water_b.png",
+  "sand": "assets/sand.png",
+  "rockground": "assets/rockground.png",
+  "tree": "assets/tree_cut.png",
+  "rock": "assets/rock_cut.png",
+  "bush": "assets/bush_cut.png",
+  "lighthouse": "assets/lighthouse.png"
+ },
+ "traveler": {
+  "down": [
+   "assets/traveler_down_f1.png",
+   "assets/traveler_down_f2.png",
+   "assets/traveler_down_f3.png",
+   "assets/traveler_down_f4.png"
+  ],
+  "downright": [
+   "assets/traveler_downright_f1.png",
+   "assets/traveler_downright_f2.png",
+   "assets/traveler_downright_f3.png",
+   "assets/traveler_downright_f4.png",
+   "assets/traveler_downright_f5.png",
+   "assets/traveler_downright_f6.png",
+   "assets/traveler_downright_f7.png",
+   "assets/traveler_downright_f8.png"
+  ],
+  "right": [
+   "assets/traveler_right_f1.png",
+   "assets/traveler_right_f2.png",
+   "assets/traveler_right_f3.png",
+   "assets/traveler_right_f4.png",
+   "assets/traveler_right_f5.png",
+   "assets/traveler_right_f6.png",
+   "assets/traveler_right_f7.png",
+   "assets/traveler_right_f8.png"
+  ],
+  "up": [
+   "assets/traveler_up_f1.png",
+   "assets/traveler_up_f2.png",
+   "assets/traveler_up_f3.png",
+   "assets/traveler_up_f4.png"
+  ],
+  "upright": [
+   "assets/traveler_upright_f1.png",
+   "assets/traveler_upright_f2.png",
+   "assets/traveler_upright_f3.png",
+   "assets/traveler_upright_f4.png",
+   "assets/traveler_upright_f5.png",
+   "assets/traveler_upright_f6.png",
+   "assets/traveler_upright_f7.png",
+   "assets/traveler_upright_f8.png"
+  ]
+ },
+ "npcs": {
+  "fox": "assets/npc_fox_right_f1.png",
+  "fly_agaric": "assets/npc_fly_agaric_down_f1.png"
+ }
+}

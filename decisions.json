@@ -37,6 +37,29 @@
      "Playtester"
     ],
     "note": "Browser world at /world/"
+   },
+   {
+    "name": "Writing Team",
+    "roles": [
+     "Lead Writer",
+     "Story Editor"
+    ],
+    "note": "Story, dialogue and lore"
+   },
+   {
+    "name": "Sound Team",
+    "roles": [
+     "Composer",
+     "Sound Designer"
+    ],
+    "note": "Music and sound effects"
+   },
+   {
+    "name": "Gameplay",
+    "roles": [
+     "Game Designer"
+    ],
+    "note": "Mechanics and game design"
    }
   ]
  },
@@ -167,6 +190,10 @@
    "date": "2026-10-11 14:19 PT",
    "decision": "Studio-made fox (walk right f1-8 v2, mirrored) and fly agaric (walk right/left/down/up f1-4 v2) wander the world as NPCs alongside the traveler, who stays the player. Sand is now Branch 2 art (sand v6 + sand b v2) with beach shore v7 on sand/rock-to-sea edges, so no code-drawn ground remains.",
    "progress": "NPCs: ~8 fps, collision, y-sort, idle pauses, never on water (checked). import_tiles.py builds npcs.json and sand/beach (newest v); all keying samples the corner colour (magenta #FA08FA, lavender, off-white #E6E1D4) with tolerance. traveler.py now uses up-right v4 (magenta) and down/up v2; up-left mirrors up-right. Zero console errors."
+  },
+  {
+   "date": "2026-10-11 14:19 PT",
+   "decision": "CEO adds a Writing Team (Lead Writer, Story Editor), Sound Team (Composer, Sound Designer) and Gameplay (Game Designer), each reporting to the CEO. Spore Run is retired; its link stays on the portal."
   }
  ]
 }
