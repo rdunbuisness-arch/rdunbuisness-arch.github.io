@@ -1299,6 +1299,14 @@
     "branch2/traveler_walk_upright_f6_v3.png": "1791753116930106139:22514",
     "branch2/traveler_walk_upright_f7_v3.png": "1791753116934106139:22515",
     "branch2/traveler_walk_upright_f8_v3.png": "1791753116938106139:22468",
-    "branch2/tile_beach_shore_v7.png": "1791753151566106139:22246"
+    "branch2/tile_beach_shore_v7.png": "1791753151566106139:22246",
+    "branch1/traveler_walk_down_f1_v2.png": "1791753219966106139:22165",
+    "branch1/traveler_walk_down_f2_v2.png": "1791753226154106139:21849",
+    "branch1/traveler_walk_down_f3_v2.png": "1791753234602106139:22150",
+    "branch1/traveler_walk_down_f4_v2.png": "1791753239982106139:22015",
+    "branch1/traveler_walk_up_f1_v2.png": "1791753246918106139:22116",
+    "branch1/traveler_walk_up_f2_v2.png": "1791753254846106139:21828",
+    "branch1/traveler_walk_up_f3_v2.png": "1791753261822106139:22099",
+    "branch1/traveler_walk_up_f4_v2.png": "1791753269238106139:21909"
   }
 }
