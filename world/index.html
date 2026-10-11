@@ -23,6 +23,8 @@ const HX=52.5,HY=11.5,clipX=y=>coastX(y)+4;
 const hr=(a)=>4.6+Math.sin(a*3+1.3)*.9+Math.sin(a*5+.4)*.5+Math.sin(a*2-.8)*.6;
 for(let y=2;y<22;y++)for(let x=40;x<MW;x++){const dx=x-HX,dy=(y-HY)*1.25,d=Math.hypot(dx,dy),r=hr(Math.atan2(dy,dx))+(dx<0?1.2:0)+hash(x,y)*.6;
  if(x>clipX(y))continue;if(d<r-2.2)map[y][x]=ROCK;else if(d<r-.6)map[y][x]=x<coastX(y)-1&&map[y][x]===G?ROCK:SAND;}
+// fill sand pockets enclosed by rock
+for(let y=1;y<MH-1;y++)for(let x=1;x<MW-1;x++)if(map[y][x]===SAND&&[[1,0],[-1,0],[0,1],[0,-1]].filter(([a,b])=>map[y+b][x+a]===ROCK).length>=3)map[y][x]=ROCK;
 // break up straight beach strips with a few coves and spits
 for(let y=0;y<MH;y++){const c=coastX(y);if(hash(c,y*3)<.25&&map[y][c-1]===G)map[y][c-1]=SAND;if(hash(y,c)<.2&&map[y][c+1]===SAND&&Math.abs(y-HY)>8)map[y][c+1]=SEA}
 // pond
@@ -151,7 +153,7 @@ function render(){
    for(let i=0;i<T;i++){const k=dx?ty*T+i:tx*T+i,dep=1+((Math.sin(k*.9)+Math.sin(k*.37+tx)+2)*1.1+hash(k,dx*7+dy*13+(dx?tx:ty))*1.6|0);
     ctx.fillStyle=c0;if(dx)ctx.fillRect(dx<0?sx:sx+T-dep,sy+i,dep,1);else ctx.fillRect(sx+i,dy<0?sy:sy+T-dep,1,dep);
     ctx.fillStyle=c1;if(dx)ctx.fillRect(dx<0?sx+dep:sx+T-dep-1,sy+i,1,1);else ctx.fillRect(sx+i,dy<0?sy+dep:sy+T-dep-1,1,1)}}
-  for(const[dx,dy]of[[-1,-1],[1,-1],[-1,1],[1,1]]){const a=at(tx+dx,ty),b=at(tx,ty+dy);if(a===b&&a!==W&&a!==P&&a!==G&&PR[a]>PR[t]&&COL[a]){ctx.fillStyle=COL[a][0];ctx.beginPath();ctx.arc(sx+(dx>0?T:0),sy+(dy>0?T:0),8+hash(tx,ty)*3,0,7);ctx.fill()}}}
+  for(const[dx,dy]of[[-1,-1],[1,-1],[-1,1],[1,1]]){const a=at(tx+dx,ty),b=at(tx,ty+dy);if(a===b&&a!==W&&a!==P&&a!==G&&a!==ROCK&&PR[a]>PR[t]&&COL[a]){ctx.fillStyle=COL[a][0];ctx.beginPath();ctx.arc(sx+(dx>0?T:0),sy+(dy>0?T:0),8+hash(tx,ty)*3,0,7);ctx.fill()}}}
  for(const f of flowers){const sx=f.x-cx,sy=f.y-cy;if(sx<-4||sy<-4||sx>VW+4||sy>VH+4)continue;const s=Math.sin(time*2+f.p)>.6?1:0;ctx.fillStyle="#3f7a2e";ctx.fillRect(sx,sy+1,1,2);ctx.fillStyle=f.c;ctx.fillRect(sx-1+s,sy,3,1);ctx.fillRect(sx+s,sy-1,1,3);ctx.fillStyle="#ffe9a0";ctx.fillRect(sx+s,sy,1,1)}
  for(const r of reeds){const sx=r.x-cx,sy=r.y-cy,s=Math.round(Math.sin(time*1.5+r.x)*.6);ctx.fillStyle="#4c7a2a";ctx.fillRect(sx,sy-6,1,7);ctx.fillRect(sx+2+s,sy-8,1,9);ctx.fillStyle="#6b4424";ctx.fillRect(sx+2+s,sy-9,1,3)}
  // lily pads

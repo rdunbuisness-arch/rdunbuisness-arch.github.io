@@ -4,7 +4,12 @@
   "downright": [
    "assets/traveler_downright_f1.png",
    "assets/traveler_downright_f2.png",
-   "assets/traveler_downright_f3.png"
+   "assets/traveler_downright_f3.png",
+   "assets/traveler_downright_f4.png",
+   "assets/traveler_downright_f5.png",
+   "assets/traveler_downright_f6.png",
+   "assets/traveler_downright_f7.png",
+   "assets/traveler_downright_f8.png"
   ],
   "right": [
    "assets/traveler_right_f1.png",
@@ -27,5 +32,5 @@
    "assets/traveler_upright_f8.png"
   ]
  },
- "sig": "[('traveler_v5.png', 1791749913298106139), ('traveler_walk_downright_f1_v2.png', 1791752612974106139), ('traveler_walk_downright_f2_v2.png', 1791752612978106139), ('traveler_walk_downright_f3_v2.png', 1791752612982106139), ('traveler_walk_right_f1_v2.png', 1791749913354106139), ('traveler_walk_right_f2_v2.png', 1791749913886106139), ('traveler_walk_right_f3_v2.png', 1791749913870106139), ('traveler_walk_right_f4_v2.png', 1791749913954106139), ('traveler_walk_right_f5_v2.png', 1791749913954106139), ('traveler_walk_right_f6_v2.png', 1791749913962106139), ('traveler_walk_right_f7_v2.png', 1791749913926106139), ('traveler_walk_right_f8_v2.png', 1791749913198106139), ('traveler_walk_upright_f1_v1.png', 1791752170842106139), ('traveler_walk_upright_f2_v1.png', 1791752170842106139), ('traveler_walk_upright_f3_v1.png', 1791752170846106139), ('traveler_walk_upright_f4_v1.png', 1791752170854106139), ('traveler_walk_upright_f5_v1.png', 1791752170858106139), ('traveler_walk_upright_f6_v1.png', 1791752170858106139), ('traveler_walk_upright_f7_v1.png', 1791752170862106139), ('traveler_walk_upright_f8_v1.png', 1791752170850106139)]"
+ "sig": "[('traveler_v5.png', 1791749913298106139), ('traveler_walk_downright_f1_v2.png', 1791752612974106139), ('traveler_walk_downright_f2_v2.png', 1791752612978106139), ('traveler_walk_downright_f3_v2.png', 1791752612982106139), ('traveler_walk_downright_f4_v2.png', 1791752716434106139), ('traveler_walk_downright_f5_v2.png', 1791752716438106139), ('traveler_walk_downright_f6_v2.png', 1791752716442106139), ('traveler_walk_downright_f7_v2.png', 1791752716446106139), ('traveler_walk_downright_f8_v2.png', 1791752716450106139), ('traveler_walk_right_f1_v2.png', 1791749913354106139), ('traveler_walk_right_f2_v2.png', 1791749913886106139), ('traveler_walk_right_f3_v2.png', 1791749913870106139), ('traveler_walk_right_f4_v2.png', 1791749913954106139), ('traveler_walk_right_f5_v2.png', 1791749913954106139), ('traveler_walk_right_f6_v2.png', 1791749913962106139), ('traveler_walk_right_f7_v2.png', 1791749913926106139), ('traveler_walk_right_f8_v2.png', 1791749913198106139), ('traveler_walk_upright_f1_v2.png', 1791752716458106139), ('traveler_walk_upright_f2_v2.png', 1791752716462106139), ('traveler_walk_upright_f3_v2.png', 1791752716466106139), ('traveler_walk_upright_f4_v2.png', 1791752716470106139), ('traveler_walk_upright_f5_v2.png', 1791752716474106139), ('traveler_walk_upright_f6_v2.png', 1791752716478106139), ('traveler_walk_upright_f7_v2.png', 1791752716482106139), ('traveler_walk_upright_f8_v2.png', 1791752716490106139)]"
 }

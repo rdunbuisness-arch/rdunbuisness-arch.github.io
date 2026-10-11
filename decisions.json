@@ -152,6 +152,11 @@
    "date": "2026-10-11 14:01 PT",
    "decision": "Branch 2 diagonal traveler walks (downright, upright f1-8 v1) are live in the world and Spore Run; left diagonals mirror them. Off-white #E6E1D4 backgrounds are keyed out after centre-sampling.",
    "progress": "animation/traveler.py keys #E6E1D4 (tolerance 24) and picks up branch2 walks automatically; server.py restarted so the running scan loads it. Spore Run build_manifest marks branch2 walks with key #E6E1D4 and its keyBg accepts hex keys. Added favicon.ico at the studio root; portal references.json fetch now guards non-OK/invalid responses. Both shoot scripts: zero errors."
+  },
+  {
+   "date": "2026-10-11 14:05 PT",
+   "decision": "Headland grey ground is now Branch 2 art: tile_rockground_v2 + tile_rockground_b_v1 mixed per 2x2 block, with rockgrass sides (s v5 = grass north, n v3 = grass south, e v3 = grass west, w v3 = grass east) on rock/grass edges.",
+   "progress": "Headland's landward side now meets grass (sand rim only seaward); enclosed sand pockets filled with rock; flat grey corner blobs removed. Corners use the nearest side tile until corner art passes. import_tiles.py covers rockground, rockground_b, rockgrass_n/s/e/w. Zero console errors."
   }
  ]
 }
