@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Deficit mockup B — Bright Arcade / Game Boy</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"><style>*{box-sizing:border-box;margin:0}body{min-height:100vh;display:flex;justify-content:center;padding:16px;image-rendering:pixelated}
+.app{width:100%;max-width:420px;display:flex;flex-direction:column;gap:12px}
+.ex{text-align:center;font-size:10px;padding:4px;letter-spacing:1px}
+.top{display:flex;align-items:center;justify-content:space-between}.datenav{display:flex;align-items:center;gap:8px}
+button{font:inherit;cursor:pointer}.btn{padding:10px 12px}.btn.sm{padding:6px 8px;min-width:36px;min-height:36px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.panel{padding:14px}.big{font-size:34px;margin:8px 0}.big small{font-size:12px}.sub{font-size:12px;margin-bottom:10px}
+.bar{height:18px;margin:6px 0 10px;position:relative}.bar i{display:block;height:100%}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.stat{padding:10px 4px;text-align:center;display:flex;flex-direction:column;gap:6px}.stat b{font-size:14px}.stat span{font-size:8px}
+.chart{display:flex;align-items:flex-end;gap:3px;height:60px;margin-top:10px}.chart i{flex:1;display:block}
+.eq{font-size:11px;margin:8px 0 14px}.todaydef{font-size:22px}
+.tally{display:grid;grid-template-columns:72px 1fr 72px;gap:8px;align-items:center;margin:8px 0}.tally output{text-align:center;font-size:30px}
+.tally.sm{grid-template-columns:40px 64px 40px;margin:0}.tally.sm output{font-size:16px}.big-btn{min-height:52px}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.burn{margin:14px 0}
+.actions{display:grid;grid-template-columns:2fr 1fr;gap:8px}.primary{min-height:52px}.foot{text-align:center;font-size:10px;opacity:.7}
+.label{font-size:10px;letter-spacing:1px}
+body{background:#9bbc0f;color:#0f380f;font-family:'Press Start 2P',monospace;font-size:11px;line-height:1.5}
+.app{background:#8bac0f;padding:14px;border:6px solid #0f380f;box-shadow:inset 0 0 0 4px #306230}
+.ex{background:#0f380f;color:#9bbc0f;font-size:8px}.logo{font-size:12px}
+.panel{background:#9bbc0f;border:4px solid #0f380f;box-shadow:4px 4px 0 #306230}
+.big{font-size:24px}.sub,.eq{font-size:9px}.stat b{font-size:10px}.stat span{font-size:7px}
+.btn{background:#306230;color:#9bbc0f;border:4px solid #0f380f;font-size:10px}.btn:active{transform:translate(2px,2px)}
+.primary{background:#0f380f;color:#e0f8d0}
+.bar{border:4px solid #0f380f;background:#8bac0f}.bar i{background:#0f380f}.bar.goal i{background:#306230}
+.chart i.pos{background:#0f380f}.chart i.neg{background:repeating-linear-gradient(0deg,#306230 0 3px,transparent 3px 6px)}.chart i.none{background:#8bac0f;border-top:3px solid #306230}.chart i.live{outline:3px dashed #0f380f}
+.todaydef{font-size:18px}.tally output{font-size:22px}</style></head><body>
+<div class="app">
+ <div class="ex">EXAMPLE DATA — mockup only</div>
+ <header class="top"><span class="logo">DEFICIT</span>
+  <nav class="datenav"><button class="btn sm" aria-label="Previous day">◀</button><span>MON 10/12</span><button class="btn sm" aria-label="Next day">▶</button></nav>
+  <button class="btn sm" aria-label="Settings">⚙</button></header>
+ <section class="panel hero">
+  <div class="label">TOTAL DEFICIT</div>
+  <div class="big">+4,820 <small>kcal</small></div>
+  <div class="sub">1.4 lb banked · 2,180 kcal to next lb</div>
+  <div class="bar"><i style="width:38%"></i></div>
+  <div class="row"><span class="label">GOAL −30 LB</span><span class="label">5%</span></div>
+  <div class="bar goal"><i style="width:5%"></i></div>
+ </section>
+ <section class="stats">
+  <div class="panel stat"><b>5d</b><span>STREAK</span></div>
+  <div class="panel stat"><b>+803</b><span>7-DAY AVG</span></div>
+  <div class="panel stat"><b>208.6</b><span>EST LB</span></div>
+  <div class="panel stat"><b>FEB 23</b><span>GOAL ETA</span></div>
+ </section>
+ <section class="panel">
+  <div class="label">LAST 21 DAYS</div>
+  <div class="chart"><i class="pos" style="height:59%"></i><i class="pos" style="height:77%"></i><i class="neg" style="height:23%"></i><i class="none" style="height:8%"></i><i class="pos" style="height:86%"></i><i class="pos" style="height:71%"></i><i class="pos" style="height:97%"></i><i class="pos" style="height:46%"></i><i class="none" style="height:8%"></i><i class="pos" style="height:82%"></i><i class="pos" style="height:89%"></i><i class="neg" style="height:12%"></i><i class="pos" style="height:67%"></i><i class="pos" style="height:84%"></i><i class="pos" style="height:100%"></i><i class="pos" style="height:61%"></i><i class="pos" style="height:75%"></i><i class="pos" style="height:87%"></i><i class="pos" style="height:78%"></i><i class="pos" style="height:96%"></i><i class="pos live" style="height:90%"></i></div>
+ </section>
+ <section class="panel today">
+  <div class="row"><span class="label">TODAY · OPEN</span><span class="todaydef">+940</span></div>
+  <div class="eq">2,290 base + 250 burn − 1,600 eaten = <b>+940</b></div>
+  <div class="label">EATEN</div>
+  <div class="tally"><button class="btn big-btn">−100</button><output>1,600</output><button class="btn big-btn">+100</button></div>
+  <div class="chips"><button class="btn">+50</button><button class="btn">+250</button><button class="btn">+500</button></div>
+  <div class="row burn"><span class="label">EXTRA BURN</span><span class="tally sm"><button class="btn sm">−50</button><output>250</output><button class="btn sm">+50</button></span></div>
+  <div class="actions"><button class="btn primary">FINISH DAY ✓</button><button class="btn">LOG</button></div>
+ </section>
+ <p class="foot">B — Bright Arcade / Game Boy · example data, not real logs</p>
+</div></body></html>
